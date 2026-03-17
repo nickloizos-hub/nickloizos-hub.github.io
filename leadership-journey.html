@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikolaos Loizos: Leadership Journey</title>
+<meta name="description" content="25 years of IT leadership across maritime, oil & gas, and digital transformation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1C1917;--navy-light:#292524;--navy-mid:#44403C;--slate:#78716C;--slate-light:#A8A29E;--sand:#F8F6F0;--sand-dark:#EDE9E0;--white:#FFFFFF;--accent:#2E7D32;--accent-light:#4CAF50;--cat-learning-bg:#E1F5EE;--cat-learning-text:#085041;--cat-competency-bg:#E6F1FB;--cat-competency-text:#0C447C;--cat-award-bg:#FEF3D6;--cat-award-text:#633806;--cat-probono-bg:#EEEDFE;--cat-probono-text:#3C3489;--cat-influence-bg:#FBEAF0;--cat-influence-text:#72243E;--cat-giveback-bg:#E1F5EE;--cat-giveback-text:#04342C;--cat-capabilities-bg:#FAECE7;--cat-capabilities-text:#4A1B0C;--radius:12px;--radius-sm:8px;--radius-xs:5px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand);color:var(--navy);line-height:1.6;-webkit-font-smoothing:antialiased}
+.top-stripe{height:3px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent-light) 40%,transparent 100%);position:fixed;top:0;left:0;right:0;z-index:100}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.hero{background:var(--navy);padding:56px 0 48px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;right:0;bottom:0;width:40%;background:linear-gradient(135deg,transparent 0%,rgba(46,125,50,0.08) 100%);pointer-events:none}
+.hero-content{position:relative;z-index:1}
+.hero-label{display:inline-block;font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-light);margin-bottom:16px}
+.hero h1{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(32px,5vw,48px);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:var(--accent-light)}
+.hero-accent{width:40px;height:2px;background:var(--accent-light);margin-bottom:16px}
+.hero-sub{font-size:17px;color:var(--slate-light);max-width:640px;line-height:1.6}
+.stats-bar{background:var(--white);border-bottom:1px solid var(--sand-dark);padding:20px 0;position:sticky;top:3px;z-index:50;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat-item{text-align:center}
+.stat-num{font-family:'Outfit',sans-serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1}
+.stat-label{font-size:12px;color:var(--slate);margin-top:3px;font-weight:500}
+.section{padding:48px 0 16px}
+.section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:8px;position:relative}
+.section-num{font-family:'DM Serif Display',Georgia,serif;font-size:56px;font-weight:400;color:var(--navy);opacity:0.06;position:absolute;left:-4px;top:-20px;letter-spacing:-2px;line-height:1;pointer-events:none}
+.section-title{font-family:'DM Serif Display',Georgia,serif;font-size:26px;font-weight:400;color:var(--navy)}
+.section-desc{font-size:14px;color:var(--slate);margin-bottom:24px}
+.career-scroll{overflow-x:auto;margin:0 -24px;padding:0 24px 16px;-webkit-overflow-scrolling:touch}
+.career-scroll::-webkit-scrollbar{height:6px}
+.career-scroll::-webkit-scrollbar-track{background:var(--sand-dark);border-radius:3px}
+.career-scroll::-webkit-scrollbar-thumb{background:var(--slate-light);border-radius:3px}
+.career-table{border-collapse:separate;border-spacing:0;min-width:1000px;width:100%;font-size:13px}
+.career-table thead th{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--slate);padding:10px 12px;text-align:left;border-bottom:2px solid var(--navy);white-space:nowrap;background:var(--sand)}
+.career-table tbody td{padding:12px;border-bottom:1px solid var(--sand-dark);vertical-align:top;color:var(--navy);line-height:1.5}
+.career-table tbody tr:hover td{background:var(--white)}
+.career-table .role-name{font-weight:600}
+.unit-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:var(--radius-xs);white-space:nowrap}
+.unit-shipping{background:#C8E6C9;color:#1B5E20}
+.unit-upstream{background:#BBDEFB;color:#0D47A1}
+.unit-downstream{background:#FFE0B2;color:#E65100}
+.unit-refineries{background:#FFCDD2;color:#B71C1C}
+.unit-maritime{background:#B2DFDB;color:#004D40}
+.filter-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--sand-dark)}
+.filter-btn{font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:500;padding:6px 16px;border-radius:20px;border:1.5px solid var(--sand-dark);background:var(--white);color:var(--slate);cursor:pointer;transition:all 0.2s;white-space:nowrap}
+.filter-btn:hover{border-color:var(--slate-light);color:var(--navy)}
+.filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.milestones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:32px}
+.m-card{background:var(--white);border-radius:var(--radius);padding:18px 20px;border:1px solid transparent;border-left:3px solid transparent;transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s;display:flex;flex-direction:column;position:relative}
+.m-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(28,25,23,0.08);border-color:var(--sand-dark)}
+.m-card.cat-award-card{border-left:3px solid #EF9F27}
+.m-card.cat-competency-card:hover{border-left-color:var(--cat-competency-text)}
+.m-card.cat-learning-card:hover{border-left-color:var(--cat-learning-text)}
+.m-card.cat-giveback-card:hover,.m-card.cat-probono-card:hover{border-left-color:var(--cat-probono-text)}
+.m-card.cat-capabilities-card:hover{border-left-color:var(--cat-capabilities-text)}
+.m-card.cat-influence-card:hover{border-left-color:var(--cat-influence-text)}
+.m-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.m-card-year{font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;color:var(--slate-light)}
+.m-card-cat{font-size:10px;font-weight:600;padding:2px 8px;border-radius:var(--radius-xs)}
+.m-card-theme{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--accent);margin-bottom:6px}
+.m-card-big{font-family:'Outfit',sans-serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:4px}
+.m-card h3{font-family:'DM Serif Display',Georgia,serif;font-size:16px;font-weight:400;color:var(--navy);line-height:1.35;margin-bottom:6px}
+.m-card p{font-size:13px;color:var(--slate);line-height:1.5;flex-grow:1}
+.m-card-quote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:15px;color:var(--navy-light);border-left:3px solid #EF9F27;padding:10px 12px;margin:8px 0;line-height:1.5;background:rgba(239,159,39,0.06);border-radius:0 var(--radius-xs) var(--radius-xs) 0}
+.m-card-footer{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--sand-dark)}
+.m-card-person{font-size:12px;color:var(--slate);font-weight:500}
+.award-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:var(--radius-xs);background:var(--cat-award-bg);color:var(--cat-award-text)}
+.award-badge::before{content:'\2605';font-size:10px}
+.m-card.hidden{display:none}
+.year-divider{grid-column:1/-1;font-family:'DM Serif Display',Georgia,serif;font-size:20px;font-weight:400;color:var(--navy);padding:20px 0 4px;border-bottom:1px solid var(--sand-dark);margin-bottom:4px}
+.year-divider:first-child{padding-top:0}
+.year-divider.hidden{display:none}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:32px}
+.edu-group-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin:20px 0 10px;grid-column:1/-1}
+.edu-group-title:first-child{margin-top:0}
+.edu-card{background:var(--white);border-radius:var(--radius);padding:16px 18px;border-left:4px solid var(--navy);transition:transform 0.15s}
+.edu-card:hover{transform:translateY(-1px)}
+.edu-card.cert{border-left-color:var(--accent)}
+.edu-card.train{border-left-color:var(--cat-competency)}
+.edu-card.schol{border-left-color:var(--cat-award)}
+.edu-card-year{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;color:var(--slate-light);margin-bottom:4px}
+.edu-card h4{font-family:'DM Serif Display',Georgia,serif;font-size:15px;font-weight:400;color:var(--navy);line-height:1.35;margin-bottom:3px}
+.edu-card-inst{font-size:13px;color:var(--slate);line-height:1.4}
+.edu-card-note{font-size:12px;color:var(--slate-light);font-style:italic;margin-top:4px}
+.cap-center{text-align:center;margin-bottom:32px}
+.cap-quote{font-family:'DM Serif Display',Georgia,serif;font-size:22px;font-weight:400;color:var(--navy);font-style:italic}
+.cap-quote-attr{font-size:14px;color:var(--slate);margin-top:4px}
+.cap-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-bottom:32px}
+.cap-tile{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1.5px solid var(--sand-dark);transition:border-color 0.2s,box-shadow 0.2s;cursor:pointer}
+.cap-tile:hover{border-color:var(--slate-light)}
+.cap-tile.open{border-color:var(--navy);box-shadow:0 4px 16px rgba(15,27,45,0.1)}
+.cap-tile-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;user-select:none}
+.cap-tile-left{display:flex;align-items:center;gap:10px}
+.cap-tile-icon{width:36px;height:36px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;flex-shrink:0}
+.cap-tile-name{font-family:'DM Serif Display',Georgia,serif;font-size:15px;font-weight:400;color:var(--navy)}
+.cap-tile-group{font-size:11px;font-weight:500;color:var(--slate)}
+.cap-tile-arrow{font-size:14px;color:var(--slate-light);transition:transform 0.25s}
+.cap-tile.open .cap-tile-arrow{transform:rotate(180deg)}
+.cap-tile-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.25s ease;padding:0 18px}
+.cap-tile.open .cap-tile-body{max-height:500px;padding:0 18px 16px}
+.cap-tile-body ul{list-style:none;padding:0}
+.cap-tile-body li{font-size:13px;color:var(--slate);line-height:1.6;padding:4px 0 4px 16px;position:relative}
+.cap-tile-body li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:0.5}
+.cap-tile-divider{height:1px;background:var(--sand-dark);margin:10px 0}
+.cap-tile-subhead{font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:var(--navy-mid);margin-bottom:4px}
+.page-footer{background:var(--navy);padding:32px 0;margin-top:32px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-name{font-family:'DM Serif Display',Georgia,serif;font-size:18px;font-weight:400;color:var(--white)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:13px;color:var(--slate-light);text-decoration:none;transition:color 0.15s}
+.footer-links a:hover{color:var(--white)}
+.footer-credit{font-size:11px;color:var(--slate);margin-top:12px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeUp 0.5s ease forwards;opacity:0}
+@media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}.milestones-grid{grid-template-columns:1fr}.cap-tiles{grid-template-columns:1fr 1fr}.hero{padding:40px 0 36px}.container{padding:0 16px}}
+@media(max-width:480px){.cap-tiles{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}.stat-num{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="top-stripe"></div>
+<header class="hero"><div class="container hero-content"><div class="hero-label">Leadership journey</div><h1>Nikolaos <span>Loizos</span></h1><div class="hero-accent"></div><p class="hero-sub">25 years driving digital transformation, service delivery, and network operations across maritime, oil & gas, and retail infrastructure. From 80 ship visits to leading Europe's NOC.</p></div></header>
+<nav class="stats-bar"><div class="container"><div class="stats-grid"><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">25+</div><div class="stat-label">Years</div></a><a href="#milestones" class="stat-item" style="text-decoration:none"><div class="stat-num">62</div><div class="stat-label">Milestones</div></a><a href="#milestones" class="stat-item" style="text-decoration:none;cursor:pointer" onclick="event.preventDefault();document.querySelector('[data-filter=award]').click();document.getElementById('milestones').scrollIntoView({behavior:'smooth'})"><div class="stat-num">15</div><div class="stat-label">Energize awards</div></a><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">10</div><div class="stat-label">Roles</div></a></div></div></nav>
+<section class="section" id="career"><div class="container"><div class="section-head"><span class="section-num">01</span><h2 class="section-title">Career progression</h2></div><p class="section-desc">From Ulysses Systems to Head of European NOC. Scroll to explore each role.</p><div class="career-scroll"><table class="career-table" id="careerTable"></table></div></div></section>
+<section class="section" id="milestones"><div class="container"><div class="section-head"><span class="section-num">02</span><h2 class="section-title">Milestones & mindset</h2></div><p class="section-desc">Key achievements, awards, and turning points across the journey.</p><div class="filter-bar" id="filterBar"></div><div class="milestones-grid" id="milestonesGrid"></div></div></section>
+<section class="section" id="education"><div class="container"><div class="section-head"><span class="section-num">03</span><h2 class="section-title">Education & certifications</h2></div><p class="section-desc">Academic qualifications, professional certifications, training, and scholarships.</p><div class="edu-grid" id="eduGrid"></div></div></section>
+<section class="section" id="capabilities"><div class="container"><div class="section-head"><span class="section-num">04</span><h2 class="section-title">Profile capabilities</h2></div><p class="section-desc">Core leadership philosophy and values. Click any tile to explore.</p><div class="cap-center"><div class="cap-quote">"I know that I know nothing"</div><div class="cap-quote-attr">— Socrates</div></div><div class="cap-tiles" id="capTiles"></div></div></section>
+<footer class="page-footer"><div class="container"><div style="font-size:15px;color:var(--slate-light);margin-bottom:16px;font-style:italic">Available for senior IT leadership roles in the UK and Greece</div><div class="footer-inner"><div class="footer-name">Nikolaos Loizos</div><div class="footer-links"><a href="mailto:nickloizos@hotmail.com">Email</a><a href="https://linkedin.com/in/nikolaosloizos" target="_blank" rel="noopener">LinkedIn</a></div></div><div class="footer-credit">Concept and origination by Nick Loizos.</div></div></footer>
+<script>
+const DATA={
+careers:[
+{period:"1999–2004",role:"Customer Success Manager",company:"Ulysses Systems",unit:"maritime",budget:"$150K",team:"4 UK + 6 offshore",scope:"200 vessels, 2,000 users",skills:"Stakeholder mgmt, incident mgmt, compliance ISO, planned maintenance"},
+{period:"2004–2006",role:"Digital Deployment Lead",company:"BP",unit:"shipping",budget:"—",team:"Part of first squad to adopt agile",scope:"60 BP + 300 TC vessels",skills:"Passage planning, emission reporting, cargo ops, time charter framework"},
+{period:"2006–2008",role:"Head of Fleet's Digital Portfolio",company:"BP",unit:"shipping",budget:"$1.2M",team:"Fujitsu-led 4-member team",scope:"60 BP vessels, 1,200 users",skills:"Satellite comms, shipboard IT, remote end user services, helpdesks"},
+{period:"2008–2010",role:"Digital Applications Manager",company:"BP",unit:"shipping",budget:"—",team:"Led 3→11 team (Infosys to Wipro)",scope:"130 vessels, 2,300 users",skills:"Config mgmt, demurrage & chartering, emergency response"},
+{period:"2010–2018",role:"Head of Shipping's Digital Portfolio",company:"BP",unit:"shipping",budget:"$3.8M",team:"3 squads: 16 people",scope:"60 vessels, 1,900 users, 4 locations",skills:"Cloud integration, compliance (SOX/ISM), business continuity, cyber exercise"},
+{period:"2018–2020",role:"Digital Transformation Lead (Shipping)",company:"BP",unit:"shipping",budget:"$2.9M",team:"2 squads + 11 Wipro",scope:"60 vessels, 1,200 users",skills:"Festival orchestration, innovation, deployment cycle reduction"},
+{period:"2019–2021",role:"Digital Transformation Lead (Upstream)",company:"BP",unit:"upstream",budget:"$1.2M",team:"19 Accenture + 8 workstreams",scope:"Global, 5,000 users",skills:"Proof of concept, UX journeys, agile transformation, tech debt reduction"},
+{period:"2021–2023",role:"Head of Connectivity & Mobility ESA",company:"BP",unit:"downstream",budget:"£16M",team:"100+ personnel, 4 direct reports",scope:"7,000+ sites, Europe & South Africa",skills:"Retail networks, BP Pulse, connectivity at scale, coaching"},
+{period:"2023–2024",role:"Global NOC Transition (Interim)",company:"BP",unit:"refineries",budget:"Confidential",team:"3 transition team leads",scope:"Global, 5,000 devices",skills:"Global service transition, high-stakes industrial environments"},
+{period:"2024–",role:"Head of NOC Services, Europe",company:"BP",unit:"refineries",budget:"Confidential",team:"50 offshore resources",scope:"Europe: refineries, offices, trading floors",skills:"AI vision for trading, advanced fibre/WiFi/VoIP"},
+],
+milestones:[
+{id:1,year:"2000",era:"early",cat:"influence",theme:"Dealing with the unknown",title:"80 break fix ship visits",desc:"IT environment troubleshooting across vessels over 5 years.",big:"80 visits"},
+{id:55,year:"1999",era:"early",cat:"competency",theme:"Stakeholder manager",title:"Document management deployed across 8 shipping companies",desc:"System deployed across 300 vessels for 8 global shipping companies covering document management, hours of work and rest, and planned maintenance.",big:"300 vessels"},
+{id:56,year:"2000",era:"early",cat:"capabilities",theme:"Introducing new ideas",title:"First online call logging service",desc:"Defined and set up the first online call logging service in the maritime sector."},
+{id:57,year:"2005",era:"early",cat:"competency",theme:"Delivering projects globally",title:"Software deployment framework for vessels without internet",desc:"Created a deployment framework for BP's proprietary software on vessels during a period when internet onboard was not available. Built the service line for training and support.",big:"360 vessels"},
+{id:58,year:"2005",era:"early",cat:"competency",theme:"Influencing others",title:"Persuaded ship owners globally to adopt BP's system",desc:"Visited time chartered companies around the globe on behalf of BP Shipping to influence ship owners and managers to use BP's Open Shipping System."},
+{id:59,year:"2007",era:"early",cat:"competency",theme:"Leading change",title:"Helpdesk transition from UK to Portugal",desc:"Led the first line helpdesk transition over six months. Established a knowledge base covering issues affecting critical business outcomes on vessels.",big:"6 months"},
+{id:60,year:"2007",era:"early",cat:"capabilities",theme:"Dealing with the unknown",title:"Virtual engineer network for remote vessel support",desc:"Built a virtual team of BP approved engineers from existing strategic partners to handle geographic restrictions, adverse weather, and language barriers across vessel locations."},
+{id:61,year:"2009",era:"early",cat:"competency",theme:"Software development",title:"Messaging module for fleet communications",desc:"Led the design of a messaging module providing a consistent view of all operational and chartering communications for BP and time chartered vessels."},
+{id:62,year:"2009",era:"early",cat:"learning",theme:"Dealing with the unknown",title:"Shipping Emergency Response team",desc:"Active member of BP's Shipping Emergency Response team. Awarded spot bonuses on several occasions for going above and beyond during prolonged incidents."},
+{id:2,year:"2006",era:"early",cat:"competency",theme:"Delivering projects globally",title:"Onboard IT environment deliveries",desc:"Led the design and delivery of 4 onboard IT environments over 1 year.",big:"4 in 1 year"},
+{id:3,year:"2008",era:"early",cat:"competency",theme:"Software development",title:"CO2 emission reporting across 360 vessels",desc:"Led the development effort to retrofit BP's shipboard CO2 emission reporting. Deployed on 360 third party vessels over 2 years.",big:"360 vessels"},
+{id:4,year:"2010",era:"early",cat:"competency",theme:"Stakeholder manager",title:"Windows 7 & Lync rollout",desc:"Led Shipping's rollout to 4 locations and 700 users between 2010 and 2014.",big:"700 users"},
+{id:5,year:"2011",era:"early",cat:"competency",theme:"Testing thoroughly",title:"Cloud email platform + 50+ app remediation",desc:"Led the smooth introduction of Windows 7 & MS Office cloud email platform. Plus remediation of 50+ applications in partnership with IBM, supporting 520 users across UK, Singapore and US.",big:"520 users"},
+{id:6,year:"2015",era:"building",cat:"competency",theme:"Reduce energy consumption",title:"Server footprint reduction",desc:"Reduced Shipping's 120 server footprint to 57 in 1 year and moved first application on cloud (2015).",big:"120 → 57"},
+{id:7,year:"2016",era:"building",cat:"competency",theme:"Leading change",title:"OMS compliance framework",desc:"Designed and established OMS compliance framework for IT&S Shipping globally.",big:"3 years"},
+{id:8,year:"2017",era:"building",cat:"giveback",theme:"Coaching others",title:"Developed two BP employees from H to G",desc:"Coached and mentored two team members through grade promotion.",big:"2 developed"},
+{id:9,year:"2011",era:"building",cat:"competency",theme:"Listening to business",title:"Lync rollout as acting programme manager",desc:"Acting program manager for functions in Sunbury for the rollout of Lync. All desk phones removed creating a self reliant business."},
+{id:10,year:"2017",era:"building",cat:"probono",theme:"Add value during downtime",title:"Metron Additive Engineering ISO assurance",desc:"Embedded ISO assurance system for Metron Additive Engineering. Pro bono consultancy."},
+{id:11,year:"2017",era:"building",cat:"probono",theme:"Add value during downtime",title:"Micro satellite constellation startup",desc:"Startup aiming to create a 12 micro satellite constellation. Delivered presentation to BP on usage of micro satellites.",big:"12 satellites"},
+{id:12,year:"2017",era:"building",cat:"probono",theme:"Add value during downtime",title:"3D printing consultancy",desc:"Pro bono consultancy on 3D printing applications."},
+{id:13,year:"2015",era:"building",cat:"competency",theme:"Listening to team",title:"Software licence savings",desc:"Redefined ordering and tracking processes for software licences and maintenance agreements. Eliminated unused licences and outdated agreements.",big:"$1.2M saved"},
+{id:14,year:"2018",era:"transform",cat:"competency",theme:"Root cause & business impact analysis at scale",title:"Purchase requisition errors: cleared tech debt",desc:"Led development effort to clear tech debt for purchase requisition errors. 18,000 total PRs raised per year.",big:"7,500 → 500"},
+{id:15,year:"2018",era:"transform",cat:"competency",theme:"Root cause & business impact analysis at scale",title:"Development cycle reduction",desc:"Reduced development cycles through automated testing, streamlined code deployment and data migrations.",big:"260 → 60 days"},
+{id:16,year:"2019",era:"transform",cat:"competency",theme:"Innovation and collaboration",title:"BP Shipping technical festival @ ULC",desc:"8 industry leaders presented their technologies for 2 days. Most influential ideas selected for 6 week proof of concept.",big:"8 leaders",person:"VP Shipping"},
+{id:17,year:"2019",era:"transform",cat:"competency",theme:"Influencing others",title:"14 training courses + 1 podcast",desc:"Delivered as part of MOD IT on changing mindsets towards agility.",big:"14 courses",person:"Sponsored by VP leadership"},
+{id:18,year:"2019",era:"transform",cat:"capabilities",theme:"Design thinking: line management persona",title:"HR global ideation session",desc:"Took part in HR global ideation session for the launch of My HR website in 2019.",person:"VP Shipping"},
+{id:19,year:"2019",era:"transform",cat:"competency",theme:"Service architecture",title:"Bentley SaaS service architecture",desc:"Led the creation of a 6 workstream service architecture and consumption offering for Bentley SaaS solution in GPO.",big:"6 workstreams"},
+{id:20,year:"2019",era:"transform",cat:"award",theme:"Agile early life support (ELS)",title:"Agile adding value framework for GPO operations",desc:"Energize award for establishing an agile adding value framework to ELS for GPO operations.",awardType:"Energize",awardedBy:"Product owner"},
+{id:21,year:"2019",era:"transform",cat:"learning",theme:"DS risks identification",title:"Digital security risks identification",desc:"Early thinking on digital security implications and gaps for access provisioning for GPO GOO users. Received recognition from DS.",person:"VP Global Business Services"},
+{id:22,year:"2020",era:"transform",cat:"learning",theme:"Working in chapter",title:"Next generation model transition",desc:"Next generation model transition approaches: early thinking.",person:"VP Global Business Services"},
+{id:23,year:"2020",era:"transform",cat:"capabilities",theme:"\"BIG\"er picture",title:"CO2 emission reduction UX challenge",desc:"CO2 emission reduction ideas: revamping car sharing introducing 'Uber' UX challenge.",person:"VP MyAlc"},
+{id:24,year:"2020",era:"transform",cat:"capabilities",theme:"Design thinking: AI practitioner persona",title:"ai@bp site design",desc:"Played an instrumental role in the design of the ai@bp site by providing the right identity and personality the platform needed.",quote:"\"Nick played an instrumental role in the design of the ai@bp site by providing the right identity and personality the platform needed to engage and build the AI community within bp.\"",person:"VP ai@bp"},
+{id:25,year:"2020",era:"transform",cat:"competency",theme:"Agile transition to sustain",title:"Operator workbench (OWB): tactical intervention",desc:"2 sprints, 4 stories. Tactical intervention to free up product owners' time and accelerate first time pass resolution rate during OWB roll out.",big:"2 sprints"},
+{id:26,year:"2020",era:"transform",cat:"competency",theme:"Program management",title:"8 workstream integration plan",desc:"Delivered integration plan for 4 critical applications under WPE at Digital Factory.",big:"8 workstreams"},
+{id:27,year:"2020",era:"transform",cat:"competency",theme:"Reinvent bp",title:"Communication strategy for entity nomenclature",desc:"Responsible for the communication strategy for level E and service owners for the delivery of reinvent entity nomenclature. Eight week assignment.",big:"8 weeks",person:"VP Communications"},
+{id:28,year:"2020",era:"transform",cat:"competency",theme:"Next generation contracts",title:"Podcast for service owners",desc:"Distilling early thinking on next generation contract transition into a 15 minute podcast to help service owners adopt the right contracts for their area."},
+{id:29,year:"2020",era:"transform",cat:"giveback",theme:"Hope in COVID times",title:"Cambridge Medical Academy: COVID support",desc:"Inspired by BP's CEO, lent brain to the Cambridge Medical Academy. Helped 4 squads across the globe to adopt agile ways and deliver webinars to hospitals for the second wave of coronavirus.",big:"6 weeks"},
+{id:30,year:"2020",era:"transform",cat:"competency",theme:"Public speaking / Be the change you want to see",title:"5 podcasts on leadership and growth",desc:"Success & it's forms. Are you an expert? Circle of growth. Supported others as a form of leadership.",big:"5 podcasts"},
+{id:31,year:"2021",era:"transform",cat:"capabilities",theme:"Releasing value",title:"BP Pulse: digital support model",desc:"Established the first iteration of the digital support model for BP Pulse. This rapid charging hub for fleet vehicles is now live and first of its kind in UK.",big:"First in UK",person:"Inspired by CEO"},
+{id:32,year:"2021",era:"connect",cat:"award",theme:"Engagement and leadership",title:"Determination to work closely with the business",awardType:"One Team",awardedBy:"VP Operational Excellence ESA"},
+{id:33,year:"2022",era:"connect",cat:"award",theme:"Turning perceptions to facts",title:"UK payment service issue analysis",awardType:"One Team",desc:"Brought together a multidisciplinary team, to capture the useful and relevant data and the unbiased examination of that data to identify issues beyond the anecdotal.",awardedBy:"Director, Connectivity"},
+{id:34,year:"2021",era:"connect",cat:"competency",theme:"Servant leadership",title:"Digital employee voice: Board engagement",desc:"Handpicked to represent I&E at a Board Workforce Engagement session sharing BP experience. Engaged with two BP board members.",person:"Selected by SVP P&C"},
+{id:35,year:"2022",era:"connect",cat:"award",theme:"Introducing unproven technology",title:"Excellent work fixing and communicating issues",awardType:"Excellence",desc:"Site stability and specifically the recent site outages.",awardedBy:"Director, Connectivity & VP Operational Excellence"},
+{id:36,year:"2021",era:"connect",cat:"award",theme:"Explored beyond boundaries",title:"Thank you for your persistence!",awardType:"One Team",desc:"A key motorway retail site brought back to an operational basis with an enhanced service.",awardedBy:"IT Manager, POS Transactions"},
+{id:37,year:"2022",era:"connect",cat:"award",theme:"Dealing with a major cyber security attack",title:"Restored connectivity in Poland during Russian Ukrainian war",awardType:"Excellence",desc:"Restored alternative connectivity options to existing VSat services in Poland affecting 1,200 retail station operations.",awardedBy:"Senior Retail Ops Manager Poland & VP Connectivity"},
+{id:38,year:"2022",era:"connect",cat:"award",theme:"Mapping global requirements",title:"Service model workshops and delivery",awardType:"Live our Purpose",desc:"Led the team by establishing working sessions and progressed activity to define the new service model.",awardedBy:"Director, Connectivity"},
+{id:39,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Finance review appreciation",awardType:"Play to Win",desc:"Successful financial reviews require a high level of knowledge in setting up a $13 million budget across Europe.",awardedBy:"Director, Connectivity"},
+{id:40,year:"2022",era:"connect",cat:"award",theme:"Active listening",title:"Great support retail infrastructure!",awardType:"Care for Others",quote:"\"For your outstanding support that you have delivered. Your work ethic inspires me to be my best every day.\"",awardedBy:"Retail infrastructure team"},
+{id:41,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Enhanced support model",awardType:"Play to Win",quote:"\"Your leadership has led to a significant change and improvement for the business in such a complex environment.\"",awardedBy:"Business Manager, European Retail"},
+{id:42,year:"2023",era:"connect",cat:"award",theme:"Building better supplier relationships",title:"Revised Diebold Nixdorf contract",awardType:"Play to Win",desc:"Recognition for revising the contract with Diebold Nixdorf to improve the responsiveness of their service and BP's ability to manage their performance.",awardedBy:"Global Technical Lead, Retail"},
+{id:43,year:"2023",era:"connect",cat:"award",theme:"SME for Project Tangerine",title:"Fast charging together: BP Iberdrola Joint Venture",awardType:"Play to Win",desc:"Provided Service Delivery SME expertise ensuring BP Iberdrola Joint Venture service level agreement was a success.",awardedBy:"Joint Ventures lead"},
+{id:44,year:"2023",era:"connect",cat:"award",theme:"EMCC global practitioner",title:"Coach/mentor accreditation at practitioner level",awardType:"Care for Others",desc:"EMCC Individual accreditation to practice as a coach/mentor at practitioner level.",big:"120h mentoring",awardedBy:"VP P&C Digital"},
+{id:45,year:"2023",era:"connect",cat:"award",theme:"Caring for business outcomes",title:"Outstanding support and genuine care",awardType:"Live our Purpose",quote:"\"The support my team and I have received from you in the past year has been greatly appreciated. You genuinely care about our people and operations!\"",awardedBy:"Business Manager, European Retail"},
+{id:46,year:"2024",era:"connect",cat:"award",theme:"Servant leadership",title:"Successful migration of NOC to Infosys",awardType:"Play to Win",quote:"\"Thank you for transforming the NOC.\"",big:"5,000 devices",awardedBy:"VP Connectivity"},
+{id:47,year:"2024",era:"connect",cat:"competency",theme:"Be transparent while focusing on results",title:"Trading application performance resolved",desc:"Generated millions in savings in less than three months by resolving trading application performance issues.",big:"Millions saved"},
+{id:48,year:"2024",era:"connect",cat:"capabilities",theme:"Introducing new ideas",title:"AI vision for trading capabilities",desc:"Pioneered strategic vision to leverage AI for enhanced trading capabilities. London trading floor as first phase of a global MVP.",big:"Global MVP"},
+{id:49,year:"2024",era:"connect",cat:"competency",theme:"Servant leadership",title:"NOC transition completed ahead of schedule",desc:"Spearheaded end to end global NOC transition ahead of schedule. Set precedent now adopted company wide.",big:"5,000 devices"},
+{id:50,year:"2021",era:"connect",cat:"competency",theme:"Introducing unproven technology",title:"Cradlepoint wireless: overnight speed upgrade",desc:"Pioneered use of wireless access points (Cradlepoints), resulting in overnight increase in speed from 3G to 4G across 60 stations throughout Europe.",big:"3G → 4G"},
+{id:51,year:"2021",era:"connect",cat:"competency",theme:"Leading the design and implementation",title:"SDWAN activation across Europe",desc:"Activated SDWAN connectivity across Europe in three months with EV and Retail sites. Zero disruption during transition.",big:"3 months"},
+{id:52,year:"2023",era:"connect",cat:"competency",theme:"Joint Ventures",title:"BP Iberdrola Joint Venture: service delivery SME",desc:"Provided Service Delivery SME expertise ensuring the Joint Venture service level agreement was a success."},
+{id:53,year:"2015",era:"building",cat:"competency",theme:"Clarity builds trust",title:"ServiceNow financial framework: operational cost reduction",desc:"Implemented a financial framework in ServiceNow for improved cost tracking and decision making across multiple units.",big:"$3.8M saved"},
+{id:54,year:"2021",era:"connect",cat:"competency",theme:"Hope in COVID times",title:"Field Service Model transformation during COVID chipset shortage",desc:"Transformed BP's Field Service Model during the COVID 19 chipset shortage, ensuring seamless continuity and cost effective solutions."},
+],
+capabilities:[
+{name:"Leadership enabler",group:"Learnings",icon:"L",color:"#E1F5EE",iconColor:"#085041",nodes:[{points:["Passionate / proactive","Able and willing to change direction and thinking","Can do attitude"]}]},
+{name:"Empathy & Moral compass",group:"Inner strengths",icon:"I",color:"#EEEDFE",iconColor:"#3C3489",nodes:[{sub:"Empathy",points:["Treating people how I want to be treated","Understanding that we all fight our own undeclared battles","Positively reinforcing the strengths of others"]},{sub:"Moral compass",points:["Putting people first","Focusing on ethical decision making","Daily reflecting on my own approach towards others"]}]},
+{name:"Influencing & resolving conflict",group:"Influencing others",icon:"F",color:"#FBEAF0",iconColor:"#72243E",nodes:[{sub:"Influencing others",points:["Open about failures : we all make mistakes","Learning from mistakes : experimenting, exploring","Create a common end goal / vision ('win-win')","Balancing 'bringing people along in the journey' and carving in isolation an 'expedited progression path'"]},{sub:"Resolving conflict and problems",points:["Actively listening to understand with the aim to solve problems","Bringing people together : harnessing brain power","Resolving conflict in a cooperative and productive way ('win-win')"]}]},
+{name:"Creative mind & ambiguity",group:"Discover the why",icon:"D",color:"#E6F1FB",iconColor:"#0C447C",nodes:[{sub:"Creative mind",points:["Thinking out of the box","Shaping / sharing vision : clear about end state","Not afraid to ask for help"]},{sub:"Dealing with ambiguity",points:["Accept that nothing is perfect","Answers will only be given through experiments","Not giving up : growth mindset"]}]},
+{name:"Nurturing capability & value creation",group:"Enabling others",icon:"E",color:"#FAECE7",iconColor:"#4A1B0C",nodes:[{sub:"Nurturing capability",points:["Driving, nurturing and developing capability","Proactively nurturing talent","Committed to daily learning"]},{sub:"Value creation",points:["Enabling others to make a difference and add value","Proactively mentoring individuals and teams"]}]},
+{name:"Story telling",group:"Giving back",icon:"G",color:"#E1F5EE",iconColor:"#04342C",nodes:[{points:["Unique story telling that brings subjects to life","Stories everyone can relate to"]}]},
+{name:"Core behaviours",group:"Core behaviours",icon:"C",color:"#F1EFE8",iconColor:"#444441",nodes:[{points:["Transparent authentic leader","Shows vulnerability","Proven ability to work in and lead teams"]}]},
+{name:"True North",group:"True North",icon:"N",color:"#FEF3D6",iconColor:"#633806",nodes:[{points:["Thinking out of the box","Shaping / sharing vision : clear about end state","Not afraid to ask for help","Actively listening to understand with the aim to solve problems","Bringing people together : harnessing brain power","Resolving conflict in a cooperative and productive way ('win-win')"]}]},
+],
+education:{
+  academic:[
+    {year:"1997",title:"BSc in Maritime Business and Maritime Law",inst:"University of Plymouth"},
+    {year:"1998",title:"MSc in Quality Management",inst:"University of Stirling",note:"Awarded Scholarship"},
+    {year:"1999",title:"MSc in Information Technology",inst:"University of Stirling",note:"Awarded Scholarship"},
+    {year:"2000",title:"PhD in Quality Management & Information Technology (not completed)",inst:"University of Stirling",note:"Awarded Scholarship. Not completed due to work commitments."},
+  ],
+  certifications:[
+    {year:"2024",title:"Insights Discovery Client Practitioner",inst:"Insights"},
+    {year:"2023",title:"EMCC Global Individual Accreditation, EIA Practitioner Level",inst:"European Mentoring and Coaching Council"},
+    {year:"2023",title:"Coaching Professional Level 5 Apprenticeship",inst:"BPP / Grant Thornton"},
+    {year:"2023",title:"Functional Skills Qualification in English at Level 2",inst:"City & Guilds"},
+    {year:"2016",title:"ITIL V3 Intermediate Certificate in IT Service Transition",inst:"AXELOS Global Best Practice"},
+    {year:"2014",title:"ITIL V3 Intermediate Certificate in IT Service Design",inst:"AXELOS Global Best Practice"},
+    {year:"2012",title:"ITIL Intermediate Certificate in Operational Support and Analysis",inst:"BCS, The Chartered Institute for IT"},
+    {year:"2011",title:"ITIL V3 Foundation Certificate in IT Service Management",inst:"AXELOS Global Best Practice"},
+    {year:"2008",title:"PRINCE2\u00ae Foundation Certification",inst:"AXELOS Global Best Practice"},
+  ],
+  training:[
+    {year:"2010",title:"Managing Projects",inst:"George Washington University, School of Business, London",note:"Earned 2.3 Continuing Education Units"},
+    {year:"2007",title:"Leadership and Managing People",inst:"BP Internal"},
+    {year:"2007",title:"Oil Trading",inst:"BP Internal"},
+    {year:"1998",title:"ISO 9000 and ISM Code Auditor",inst:"Ferriby Group International"},
+  ],
+  scholarships:[
+    {year:"1998–1999",title:"Panxiatiko Idrima Ipotrofion, Ioannoy Diamanti Patera Scholarship",inst:"Awarded for outstanding academic achievement and high-value dissertation contribution to the shipping industry"},
+    {year:"1998–1999",title:"MSc Educational Grant",inst:"University of Stirling"},
+    {year:"2000",title:"PhD Sponsorship",inst:"University of Stirling"},
+  ]
+}
+};
+
+const unitLabels={shipping:'Shipping',upstream:'Upstream',downstream:'Downstream',refineries:'Refineries & Platforms',maritime:'Maritime'};
+const unitClass={shipping:'unit-shipping',upstream:'unit-upstream',downstream:'unit-downstream',refineries:'unit-refineries',maritime:'unit-maritime'};
+const catMeta={learning:{label:'Learning',bg:'var(--cat-learning-bg)',color:'var(--cat-learning-text)'},competency:{label:'Competency',bg:'var(--cat-competency-bg)',color:'var(--cat-competency-text)'},award:{label:'Award',bg:'var(--cat-award-bg)',color:'var(--cat-award-text)'},probono:{label:'Pro bono',bg:'var(--cat-probono-bg)',color:'var(--cat-probono-text)'},influence:{label:'Influenced by',bg:'var(--cat-influence-bg)',color:'var(--cat-influence-text)'},giveback:{label:'Giving back',bg:'var(--cat-giveback-bg)',color:'var(--cat-giveback-text)'},capabilities:{label:'Capabilities',bg:'var(--cat-capabilities-bg)',color:'var(--cat-capabilities-text)'}};
+
+function renderCareerGrid(){
+  const t=document.getElementById('careerTable');
+  let h='<thead><tr><th>Period</th><th>Role</th><th>Unit</th><th>Budget</th><th>Team</th><th>Scope</th><th>Key skills</th></tr></thead><tbody>';
+  DATA.careers.forEach(c=>{h+=`<tr><td style="white-space:nowrap">${c.period}</td><td><span class="role-name">${c.role}</span><br><span style="font-size:11px;color:var(--slate)">${c.company}</span></td><td><span class="unit-tag ${unitClass[c.unit]}">${unitLabels[c.unit]}</span></td><td>${c.budget}</td><td>${c.team}</td><td>${c.scope}</td><td style="font-size:12px;color:var(--slate)">${c.skills}</td></tr>`;});
+  t.innerHTML=h+'</tbody>';
+}
+
+function renderFilters(){
+  const bar=document.getElementById('filterBar');
+  // Simplified filters: All, Awards, Learning, Giving back & Pro bono, then timeline eras
+  [{key:'all',label:'All'},{key:'award',label:'Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2010'},{key:'era:building',label:'2013–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
+    const btn=document.createElement('button');btn.className='filter-btn'+(i===0?' active':'');btn.textContent=f.label;btn.dataset.filter=f.key;
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.m-card').forEach(card=>{
+        const cat=card.dataset.cat, era=card.dataset.era;
+        if(f.key==='all') card.classList.remove('hidden');
+        else if(f.key==='givepro') card.classList.toggle('hidden', cat!=='giveback' && cat!=='probono');
+        else if(f.key.startsWith('era:')) card.classList.toggle('hidden', era!==f.key.split(':')[1]);
+        else card.classList.toggle('hidden', cat!==f.key);
+      });
+      updateYearDividers();
+    });
+    bar.appendChild(btn);
+  });
+}
+
+function renderMilestones(){
+  const grid=document.getElementById('milestonesGrid');
+  const sorted=[...DATA.milestones].sort((a,b)=>{return parseInt(b.year)-parseInt(a.year)||(a.id-b.id);});
+  let lastYear='';
+  sorted.forEach((m,i)=>{
+    // Insert year divider when year changes
+    if(m.year!==lastYear){
+      const divider=document.createElement('div');
+      divider.className='year-divider';
+      divider.dataset.year=m.year;
+      divider.textContent=m.year;
+      grid.appendChild(divider);
+      lastYear=m.year;
+    }
+    const cm=catMeta[m.cat];const card=document.createElement('div');card.className='m-card animate-in cat-'+m.cat+'-card';card.style.animationDelay=Math.min(i*30,600)+'ms';card.dataset.cat=m.cat;card.dataset.era=m.era;card.dataset.year=m.year;
+    let inner=`<div class="m-card-top"><span class="m-card-year">${m.year}</span><span class="m-card-cat" style="background:${cm.bg};color:${cm.color}">${cm.label}</span></div>`;
+    if(m.theme)inner+=`<div class="m-card-theme">${m.theme}</div>`;
+    if(m.big)inner+=`<div class="m-card-big">${m.big}</div>`;
+    inner+=`<h3>${m.title}</h3>`;
+    if(m.cat==='award'){
+      if(m.quote)inner+=`<div class="m-card-quote">${m.quote}</div>`;
+      else if(m.desc)inner+=`<div class="m-card-quote">${m.desc}</div>`;
+    } else {
+      if(m.quote)inner+=`<div class="m-card-quote">${m.quote}</div>`;
+      if(m.desc)inner+=`<p>${m.desc}</p>`;
+    }
+    const hasFooter = m.awardType || m.awardedBy || m.person;
+    if(hasFooter){
+      inner+='<div class="m-card-footer">';
+      if(m.awardType) inner+=`<span class="award-badge">${m.awardType}</span>`;
+      if(m.awardedBy) inner+=`<span class="m-card-person">Awarded by ${m.awardedBy}</span>`;
+      else if(m.person) inner+=`<span class="m-card-person">${m.person}</span>`;
+      inner+='</div>';
+    }
+    card.innerHTML=inner;grid.appendChild(card);
+  });
+}
+
+function updateYearDividers(){
+  document.querySelectorAll('.year-divider').forEach(div=>{
+    const year=div.dataset.year;
+    const visibleCards=document.querySelectorAll('.m-card[data-year="'+year+'"]:not(.hidden)');
+    div.classList.toggle('hidden',visibleCards.length===0);
+  });
+}
+
+function renderEducation(){
+  const grid=document.getElementById('eduGrid');
+  const sections=[
+    {key:'academic',label:'Academic qualifications',cls:''},
+    {key:'certifications',label:'Professional certifications',cls:'cert'},
+    {key:'training',label:'Training courses',cls:'train'},
+    {key:'scholarships',label:'Scholarships',cls:'schol'},
+  ];
+  sections.forEach(sec=>{
+    const items=DATA.education[sec.key];
+    if(!items||!items.length)return;
+    const title=document.createElement('div');
+    title.className='edu-group-title';
+    title.textContent=sec.label;
+    grid.appendChild(title);
+    items.forEach(item=>{
+      const card=document.createElement('div');
+      card.className='edu-card '+sec.cls;
+      let html=`<div class="edu-card-year">${item.year}</div><h4>${item.title}</h4><div class="edu-card-inst">${item.inst}</div>`;
+      if(item.note)html+=`<div class="edu-card-note">${item.note}</div>`;
+      card.innerHTML=html;
+      grid.appendChild(card);
+    });
+  });
+}
+
+function renderCapabilities(){
+  const grid=document.getElementById('capTiles');
+  DATA.capabilities.forEach(cap=>{
+    const tile=document.createElement('div');tile.className='cap-tile';
+    let bodyHTML='';
+    cap.nodes.forEach((node,ni)=>{
+      if(ni>0)bodyHTML+='<div class="cap-tile-divider"></div>';
+      if(node.sub)bodyHTML+=`<div class="cap-tile-subhead">${node.sub}</div>`;
+      bodyHTML+='<ul>'+node.points.map(p=>`<li>${p}</li>`).join('')+'</ul>';
+    });
+    tile.innerHTML=`<div class="cap-tile-header"><div class="cap-tile-left"><div class="cap-tile-icon" style="background:${cap.color};color:${cap.iconColor}">${cap.icon}</div><div><div class="cap-tile-name">${cap.name}</div><div class="cap-tile-group">${cap.group}</div></div></div><div class="cap-tile-arrow">&#9662;</div></div><div class="cap-tile-body">${bodyHTML}</div>`;
+    tile.querySelector('.cap-tile-header').addEventListener('click',()=>{const wasOpen=tile.classList.contains('open');document.querySelectorAll('.cap-tile').forEach(t=>t.classList.remove('open'));if(!wasOpen)tile.classList.add('open');});
+    grid.appendChild(tile);
+  });
+}
+
+renderCareerGrid();renderFilters();renderMilestones();renderEducation();renderCapabilities();
+</script>
+</body>
+</html>
