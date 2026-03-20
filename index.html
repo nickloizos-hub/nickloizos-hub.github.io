@@ -38,6 +38,24 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .career-scroll::-webkit-scrollbar{height:6px}
 .career-scroll::-webkit-scrollbar-track{background:var(--sand-dark);border-radius:3px}
 .career-scroll::-webkit-scrollbar-thumb{background:var(--slate-light);border-radius:3px}
+.career-mobile{display:none}
+.career-mob-card{background:var(--white);border-radius:var(--radius);padding:14px 16px;margin-bottom:8px;cursor:pointer;border:1px solid var(--sand-dark);transition:border-color 0.2s}
+.career-mob-card:hover{border-color:var(--slate-light)}
+.career-mob-card.open{border-color:var(--navy)}
+.career-mob-top{display:flex;justify-content:space-between;align-items:center}
+.career-mob-role{font-family:'DM Serif Display',Georgia,serif;font-size:15px;font-weight:400;color:var(--navy);line-height:1.3}
+.career-mob-period{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;color:var(--slate-light)}
+.career-mob-company{font-size:12px;color:var(--slate);margin-top:2px}
+.career-mob-arrow{font-size:13px;color:var(--slate-light);transition:transform 0.25s;flex-shrink:0;margin-left:8px}
+.career-mob-card.open .career-mob-arrow{transform:rotate(180deg)}
+.career-mob-details{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.career-mob-card.open .career-mob-details{max-height:300px}
+.career-mob-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:12px;margin-top:12px;border-top:1px solid var(--sand-dark)}
+.career-mob-field{font-size:12px}
+.career-mob-field-label{font-family:'Outfit',sans-serif;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate-light);margin-bottom:2px}
+.career-mob-field-val{color:var(--navy);line-height:1.4}
+.career-mob-skills{grid-column:1/-1;margin-top:4px}
+.career-mob-skills .career-mob-field-val{font-size:12px;color:var(--slate)}
 .career-table{border-collapse:separate;border-spacing:0;min-width:1000px;width:100%;font-size:13px}
 .career-table thead th{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--slate);padding:10px 12px;text-align:left;border-bottom:2px solid var(--navy);white-space:nowrap;background:var(--sand)}
 .career-table tbody td{padding:12px;border-bottom:1px solid var(--sand-dark);vertical-align:top;color:var(--navy);line-height:1.5}
@@ -70,6 +88,7 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .m-card-big{font-family:'Outfit',sans-serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:4px}
 .m-card h3{font-family:'DM Serif Display',Georgia,serif;font-size:16px;font-weight:400;color:var(--navy);line-height:1.35;margin-bottom:6px}
 .m-card p{font-size:13px;color:var(--slate);line-height:1.5;flex-grow:1}
+
 .m-card-quote{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:15px;color:var(--navy-light);border-left:3px solid #EF9F27;padding:10px 12px;margin:8px 0;line-height:1.5;background:rgba(239,159,39,0.06);border-radius:0 var(--radius-xs) var(--radius-xs) 0}
 .m-card-footer{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--sand-dark)}
 .m-card-person{font-size:12px;color:var(--slate);font-weight:500}
@@ -151,7 +170,8 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .m-card-big{font-size:22px}
 .m-card h3{font-size:14px}
 .m-card-quote{font-size:13px;padding:8px 10px}
-.career-scroll{margin:0 -16px;padding:0 16px 12px}
+.career-scroll{display:none}
+.career-mobile{display:block}
 .career-table{min-width:800px;font-size:12px}
 .career-table thead th{font-size:10px;padding:8px}
 .career-table tbody td{padding:8px;font-size:12px}
@@ -184,8 +204,8 @@ body{font-size:11px}
 <body>
 <div class="top-stripe"></div>
 <header class="hero"><div class="container hero-content"><div class="hero-label" style="font-size:14px;letter-spacing:2px">Global IT & Digital Transformation Leader</div><h1>Nikolaos <span>Loizos</span></h1><div class="hero-accent"></div><p class="hero-sub">25 years driving digital transformation, service delivery, and network operations across maritime, oil & gas, and retail infrastructure. From 80 ship visits to leading Europe's NOC.</p><p class="hero-sub" style="margin-top:10px;font-size:15px;opacity:0.85">I turn operational chaos into structure, lead through outsourced and matrixed teams, and bring Greek cultural fluency to multinational corporate environments.</p><div class="lang-badges"><span class="lang-badge">EMCC Certified Coach</span><span class="lang-badge">Insights Discovery Practitioner</span></div><p class="hero-sub" style="margin-top:10px;font-size:13px;opacity:0.7">Coaching unlocks the answers people already have. Insights Discovery helps me approach each person in a way that is uniquely suited to them.</p></div></header>
-<nav class="stats-bar"><div class="container"><div class="stats-grid"><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">25+</div><div class="stat-label">Years</div></a><a href="#milestones" class="stat-item" style="text-decoration:none"><div class="stat-num">63</div><div class="stat-label">Milestones</div></a><a href="#milestones" class="stat-item" style="text-decoration:none;cursor:pointer" onclick="event.preventDefault();document.querySelector('[data-filter=award]').click();document.getElementById('milestones').scrollIntoView({behavior:'smooth'})"><div class="stat-num">15</div><div class="stat-label">Energize awards</div></a><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">10</div><div class="stat-label">Roles</div></a></div></div></nav>
-<section class="section" id="career"><div class="container"><div class="section-head"><span class="section-num">01</span><h2 class="section-title">Career progression</h2></div><p class="section-desc">From Ulysses Systems to Head of European NOC. Scroll to explore each role.</p><div class="career-scroll"><table class="career-table" id="careerTable"></table></div></div></section>
+<nav class="stats-bar"><div class="container"><div class="stats-grid"><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">25+</div><div class="stat-label">Years</div></a><a href="#milestones" class="stat-item" style="text-decoration:none"><div class="stat-num">66</div><div class="stat-label">Milestones</div></a><a href="#milestones" class="stat-item" style="text-decoration:none;cursor:pointer" onclick="event.preventDefault();document.querySelector('[data-filter=award]').click();document.getElementById('milestones').scrollIntoView({behavior:'smooth'})"><div class="stat-num">15</div><div class="stat-label">Energize awards</div></a><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">10</div><div class="stat-label">Roles</div></a></div></div></nav>
+<section class="section" id="career"><div class="container"><div class="section-head"><span class="section-num">01</span><h2 class="section-title">Career progression</h2></div><p class="section-desc">From Ulysses Systems to Head of European NOC. Scroll to explore each role.</p><div class="career-scroll"><table class="career-table" id="careerTable"></table></div><div class="career-mobile" id="careerMobile"></div></div></section>
 <section class="section" id="milestones"><div class="container"><div class="section-head"><span class="section-num">02</span><h2 class="section-title">Milestones & mindset</h2></div><p class="section-desc">Key achievements, awards, and turning points across the journey.</p><div class="filter-bar" id="filterBar"></div><div class="milestones-grid" id="milestonesGrid"></div></div></section>
 <section class="section" id="education"><div class="container"><div class="section-head"><span class="section-num">03</span><h2 class="section-title">Education & certifications</h2></div><p class="section-desc">Academic qualifications, professional certifications, training, and scholarships.</p><div class="edu-grid" id="eduGrid"></div></div></section>
 <section class="section" id="capabilities"><div class="container"><div class="section-head"><span class="section-num">04</span><h2 class="section-title">Profile capabilities</h2></div><p class="section-desc">Core leadership philosophy and values. Click any tile to explore.</p><div class="cap-center"><div class="cap-quote">"I know that I know nothing"</div><div class="cap-quote-attr">— Socrates</div></div><div class="cap-tiles" id="capTiles"></div></div></section>
@@ -194,19 +214,19 @@ body{font-size:11px}
 <script>
 const DATA={
 careers:[
-{period:"1999–2004",role:"Customer Success Manager",company:"Ulysses Systems",unit:"startup",budget:"$150K",team:"4 UK + 6 offshore",scope:"300 vessels, 2,000 users",skills:"Service operations, stakeholder management, incident management, ISO compliance, customer success"},
-{period:"2004–2006",role:"Digital Deployment Lead",company:"BP",unit:"shipping",budget:"—",team:"Part of first squad to adopt agile",scope:"60 BP + 300 TC vessels",skills:"Software deployment, stakeholder influence, training delivery, early agile adoption, change management"},
-{period:"2006–2008",role:"Head of Fleet's Digital Portfolio",company:"BP",unit:"shipping",budget:"$1.2M",team:"Fujitsu-led 4-member team",scope:"60 BP vessels, 1,200 users",skills:"Vendor management (Fujitsu), SLA definition, remote support operations, helpdesk transition, budget management ($1.2M)"},
-{period:"2008–2010",role:"Digital Applications Manager",company:"BP",unit:"shipping",budget:"—",team:"Led 3→11 team (Infosys to Wipro)",scope:"130 vessels, 2,300 users",skills:"Team scaling (3 to 11), business process mapping, application design, release management, emergency response"},
-{period:"2010–2018",role:"Head of Shipping's Digital Portfolio",company:"BP",unit:"shipping",budget:"$3.8M",team:"3 squads: 16 people",scope:"60 vessels, 1,900 users, 4 locations",skills:"Portfolio management (30 apps), cloud transformation, compliance (SOX/ISM), business continuity, team leadership (16 people)"},
-{period:"2018–2020",role:"Digital Transformation Lead (Shipping)",company:"BP",unit:"shipping",budget:"$3.2M",team:"2 squads + 11 Wipro",scope:"60 vessels, 1,200 users",skills:"Agile transformation, tech debt reduction, CI/CD pipeline, vendor management (Wipro), innovation leadership"},
-{period:"2020",role:"Digital Transformation Lead (Upstream: 3 rotations)",company:"BP",unit:"upstream",budget:"$1.2M",team:"3 rotations, up to 19 people per team",scope:"Global, 5,000 users (6 month programme)",skills:"Agile coaching, application integration, process automation, change management, cross functional collaboration"},
-{period:"2021–2023",role:"Head of Connectivity & Mobility ESA",company:"BP",unit:"downstream",budget:"£16M",team:"100+ personnel, 4 direct reports",scope:"7,000+ sites, Europe & South Africa",skills:"Network infrastructure (7K+ sites), multi vendor management, service model design, budget management (£16M), executive stakeholder engagement"},
-{period:"2023–2024",role:"Global NOC Transition (Interim)",company:"BP",unit:"refineries",budget:"Confidential",team:"3 transition team leads",scope:"Global, 5,000 devices",skills:"Service transition management, device migration (5K), multi vendor coordination, operational continuity, risk management"},
-{period:"2024–",role:"Head of NOC Services, Europe",company:"BP",unit:"refineries",budget:"Confidential",team:"50 offshore resources",scope:"Europe: refineries, offices, trading floors",skills:"NOC leadership, network performance optimisation, AI strategy, incident resolution, service delivery management"},
+{period:"1999–2004",role:"Customer Success Manager",company:"Ulysses Systems",unit:"startup",budget:"$150K",team:"4 UK + 6 offshore",scope:"300 vessels, 2,000 users",skills:"Service operations, stakeholder management, incident management, ISO compliance, customer success",desc:"Oversaw service operations for a document management system deployed across 300 vessels for 8 global shipping companies. Enhanced technical efficiency through business process mapping, first line support, and onsite vessel visits. Led a team of 10 across the UK and Greece, establishing one of the first online IT support ticketing systems in the maritime sector."},
+{period:"2004–2006",role:"Digital Deployment Lead",company:"BP",unit:"shipping",budget:"—",team:"Part of first squad to adopt agile",scope:"60 BP + 300 TC vessels",skills:"Software deployment, stakeholder influence, training delivery, early agile adoption, change management",desc:"Led the delivery of BP's first shipboard Open Shipping System, enabling masters on time chartered vessels to log voyage reports and emission data. Persuaded shipping partners globally to adopt the system across 360 vessels, delivering a step change in BP's ability to monitor and track vessels outside its own fleet. Part of the first squad in BP Shipping to adopt agile ways of working."},
+{period:"2006–2008",role:"Head of Fleet's Digital Portfolio",company:"BP",unit:"shipping",budget:"$1.2M",team:"Fujitsu-led 4-member team",scope:"60 BP vessels, 1,200 users",skills:"Vendor management (Fujitsu), SLA definition, remote support operations, helpdesk transition, budget management ($1.2M)",desc:"Oversaw all IT services for BP's owned fleet of 60 vessels with a $1.2M budget. Managed Fujitsu's outsourced service and defined new SLAs with multiple vendors. Improved service delivery by 20% through a more proactive, preventative approach. Reduced front line support resolution time by 30% by establishing a new helpdesk in Portugal with a comprehensive knowledge base."},
+{period:"2008–2010",role:"Digital Applications Manager",company:"BP",unit:"shipping",budget:"—",team:"Led 3→11 team (Infosys to Wipro)",scope:"130 vessels, 2,300 users",skills:"Team scaling (3 to 11), business process mapping, application design, release management, emergency response",desc:"Grew the digital support team from 3 offshore to 11 in house, in line with BP Shipping's strategic shift towards building development capability. Focused on mapping and enhancing business processes in ship operations and chartering, laying the foundation for future product development. Led a two year implementation of new ship systems that transformed the quality of communications across 360 vessels."},
+{period:"2010–2018",role:"Head of Shipping's Digital Portfolio",company:"BP",unit:"shipping",budget:"$3.8M",team:"3 squads: 16 people",scope:"60 vessels, 1,900 users, 4 locations",skills:"Portfolio management (30 apps), cloud transformation, compliance (SOX/ISM), business continuity, team leadership (16 people)",desc:"Promoted to lead a team of 16 across three squads, managing 60 applications and end user services for 1,900 users on 60 vessels. Pioneered agile adoption as an early adopter, changing mindsets and embedding a fast, outcome oriented approach. Launched the first global end user services team in Shipping. Introduced 24/7 incident management aligned to change management, driving major gains in response times. Achieved robust compliance through Sarbanes Oxley expertise that drove clean ISM code audits."},
+{period:"2018–2020",role:"Digital Transformation Lead (Shipping)",company:"BP",unit:"shipping",budget:"$3.2M",team:"2 squads + 11 Wipro",scope:"60 vessels, 1,200 users",skills:"Agile transformation, tech debt reduction, CI/CD pipeline, vendor management (Wipro), innovation leadership",desc:"Repeated success at greater scale as a key player in BP's global transformation programme. Set strategic direction for shipping's continuous delivery, aligning with digital strategy through technology experimentation. Organised the first BP Shipping Technical Festival with industry leaders including Rolls Royce and ABB. Accelerated deployment cycles from five weeks to four days and reduced purchase requisition errors by 93%."},
+{period:"2020",role:"Digital Transformation Lead (Upstream: 3 rotations)",company:"BP",unit:"upstream",budget:"$1.2M",team:"3 rotations, up to 19 people per team",scope:"Global, 5,000 users (6 month programme)",skills:"Agile coaching, application integration, process automation, change management, cross functional collaboration",desc:"Parachuted into Upstream teams to embed a hybrid agile framework across three rotations in six months. Drove the shift from waterfall to agile for teams of up to 19 members, leveraging the use case from previous shipping transformation. Final rotation at the Digital Factory: orchestrated 8 workstreams integrating 4 critical products. Created training courses and podcasts on agile principles shared across BP."},
+{period:"2021–2023",role:"Head of Connectivity & Mobility ESA",company:"BP",unit:"downstream",budget:"£16M",team:"100+ personnel, 4 direct reports",scope:"7,000+ sites, Europe & South Africa",skills:"Network infrastructure (7K+ sites), multi vendor management, service model design, budget management (£16M), executive stakeholder engagement",desc:"Turned around an underperforming, dated environment in chaos: significant technical debt, outmoded infrastructure, an inadequate support model and vendors in open conflict. Delivered a transformation across 7,000+ sites including 3,000 copper to fibre migrations, upgraded hardware and rebuilt the support model. Saved £3M+ through centralised bulk purchasing and reinvested in new technology. Played a lead role in BP's EV rollout, modernising outdated charging stations to meet accelerated demand."},
+{period:"2023–2024",role:"Global NOC Transition (Interim)",company:"BP",unit:"refineries",budget:"Confidential",team:"3 transition team leads",scope:"Global, 5,000 devices",skills:"Service transition management, device migration (5K), multi vendor coordination, operational continuity, risk management",desc:"Handpicked to lead the complex transition of BP's Global Network Operations Centre. Migrated 5,000+ devices across platforms, refineries and pipelines with zero disruption and full service continuity. Over achieved against all targets for resilience and delivered the transition ahead of schedule, pioneering pilot testing in controlled environments before full rollout. Approach was so effective it was adopted company wide."},
+{period:"2024–",role:"Head of NOC Services, Europe",company:"BP",unit:"refineries",budget:"Confidential",team:"50 offshore resources",scope:"Europe: refineries, offices, trading floors",skills:"NOC leadership, network performance optimisation, AI strategy, incident resolution, service delivery management",desc:"Directing network service delivery across BP's European refineries and offices. Maximising performance, service quality and resilience through a 50 person outsourced partner team covering three shifts. Managing 300+ reactive tickets and 2,000 proactive alerts monthly. Saved $2.9M in under three months by resolving trading floor performance issues using a diplomatic, evidence based approach. Designing strategic AI integration plans for enhanced trading capabilities."},
 ],
 milestones:[
-{id:1,year:"2000",era:"early",cat:"influence",theme:"Dealing with the unknown",title:"80 onsite vessel IT support visits",desc:"Travelled to vessels to resolve IT hardware and software issues over 5 years.",big:"80 visits"},
+{id:1,year:"2000",era:"early",cat:"influence",theme:"Dealing with the unknown",title:"80 onsite vessel IT support visits",desc:"Travelled to over 80 vessels across 5 years to resolve IT hardware and software issues, building deep first hand understanding of shipboard operations and remote maritime environments.",big:"80 visits"},
 {id:55,year:"1999",era:"early",cat:"competency",theme:"Stakeholder manager",title:"Document management deployed across 8 shipping companies",desc:"System deployed across 300 vessels for 8 global shipping companies covering document management, hours of work and rest, and planned maintenance.",big:"300 vessels"},
 {id:56,year:"2000",era:"early",cat:"capabilities",theme:"Introducing new ideas",title:"First online IT support ticketing system",desc:"Defined and set up the first online IT support ticketing system in the maritime sector."},
 {id:57,year:"2005",era:"early",cat:"competency",theme:"Delivering projects globally",title:"Software deployment framework for vessels without internet",desc:"Created a deployment framework for BP's proprietary software on vessels during a period when internet onboard was not available. Built the service line for training and support.",big:"360 vessels"},
@@ -215,21 +235,21 @@ milestones:[
 {id:60,year:"2007",era:"early",cat:"capabilities",theme:"Dealing with the unknown",title:"Virtual engineer network for remote vessel support",desc:"Built a virtual team of BP approved engineers from existing strategic partners to handle geographic restrictions, adverse weather, and language barriers across vessel locations."},
 {id:61,year:"2009",era:"early",cat:"competency",theme:"Software development",title:"Messaging module for fleet communications",desc:"Led the design of a messaging module providing a consistent view of all operational and chartering communications for BP and time chartered vessels."},
 {id:62,year:"2009",era:"early",cat:"learning",theme:"Dealing with the unknown",title:"Shipping Emergency Response team",desc:"Active member of BP's Shipping Emergency Response team. Awarded spot bonuses on several occasions for going above and beyond during prolonged incidents."},
-{id:2,year:"2006",era:"early",cat:"competency",theme:"Delivering projects globally",title:"Designed IT systems for 4 new vessels",desc:"Led the design and delivery of complete IT environments (hardware, software, telecoms) for 4 new BP vessels in 1 year.",big:"4 in 1 year"},
-{id:3,year:"2008",era:"early",cat:"competency",theme:"Software development",title:"CO2 emission reporting across 360 vessels",desc:"Led the development effort to retrofit BP's shipboard CO2 emission reporting. Deployed on 360 third party vessels over 2 years.",big:"360 vessels"},
-{id:4,year:"2010",era:"early",cat:"competency",theme:"Stakeholder manager",title:"Windows 7 & unified comms rollout",desc:"Led the rollout of Windows 7 and unified communications to 4 locations and 700 users between 2010 and 2014.",big:"700 users"},
-{id:5,year:"2011",era:"early",cat:"competency",theme:"Testing thoroughly",title:"Cloud email platform + 50+ app remediation",desc:"Led the introduction of cloud email and migrated 50+ applications in partnership with IBM, supporting 520 users across UK, Singapore and US.",big:"520 users"},
-{id:6,year:"2015",era:"building",cat:"competency",theme:"Reduce energy consumption",title:"Server footprint reduction",desc:"Reduced Shipping's 120 server footprint to 50 in 1 year and moved first application on cloud (2015).",big:"120 → 50"},
-{id:7,year:"2016",era:"building",cat:"competency",theme:"Leading change",title:"Operational compliance framework",desc:"Designed and established an operational management compliance framework for IT services in Shipping globally.",big:"3 years"},
-{id:8,year:"2017",era:"building",cat:"giveback",theme:"Coaching others",title:"Developed two team members into leadership roles",desc:"Coached and mentored two team members through promotion to senior positions.",big:"2 developed"},
+{id:2,year:"2006",era:"early",cat:"competency",theme:"Delivering projects globally",title:"Designed IT systems for 4 new vessels",desc:"Led the design and delivery of complete IT environments for 4 new BP vessels in 1 year, from server infrastructure and satellite communications to end user applications.",big:"4 in 1 year"},
+{id:3,year:"2008",era:"early",cat:"competency",theme:"Software development",title:"CO2 emission reporting across 360 vessels",desc:"Led the retrofit of BP's shipboard CO2 emission reporting system. Deployed across 360 third party vessels over 2 years, enabling masters to log voyage reports and emission data.",big:"360 vessels"},
+{id:4,year:"2010",era:"building",cat:"competency",theme:"Stakeholder manager",title:"Windows 7 & unified comms rollout",desc:"Led the rollout of Windows 7 and unified communications to 4 locations and 700 users. Partnered with global vendors to deliver training that made the business self reliant.",big:"700 users"},
+{id:5,year:"2011",era:"building",cat:"competency",theme:"Testing thoroughly",title:"Cloud email platform + 50+ app remediation",desc:"Led the introduction of cloud email and migrated 50+ applications in partnership with IBM, supporting 520 users across UK, Singapore and US with zero disruption.",big:"520 users"},
+{id:6,year:"2015",era:"building",cat:"competency",theme:"Reduce energy consumption",title:"Server footprint reduction",desc:"Reduced Shipping's 120 server footprint to 50 in 1 year using cloud services and shared infrastructure. Established a compliance profile that kept shipping compliant through to 2020.",big:"120 → 50"},
+{id:7,year:"2016",era:"building",cat:"competency",theme:"Leading change",title:"Operational compliance framework",desc:"Designed and established an operational compliance framework for IT services in Shipping globally, covering ISM code audits, Sarbanes Oxley, business continuity, and digital security.",big:"3 years"},
+{id:8,year:"2017",era:"building",cat:"giveback",theme:"Coaching others",title:"Developed two team members into leadership roles",desc:"Coached and mentored two team members through promotion to senior leadership positions using structured development plans, coaching conversations, and stretch assignments.",big:"2 developed"},
 {id:9,year:"2011",era:"building",cat:"competency",theme:"Listening to business",title:"Unified comms rollout as acting programme manager",desc:"Acting programme manager for the rollout of unified communications at BP headquarters. Removed all desk phones, creating a self reliant digital workplace."},
 {id:10,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"Metron Additive Engineering ISO assurance",desc:"Embedded ISO assurance system for Metron Additive Engineering. Pro bono consultancy."},
-{id:11,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"Micro satellite startup: closing the ship telecommunications gap",desc:"Led the initial steps of a micro satellite startup born from a real problem: missing data at sea. Explored how a 12 satellite constellation could close the telecommunications gap on vessels and proposed the solution to BP.",big:"12 satellites"},
-{id:12,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"3D printing consultancy",desc:"Pro bono consultancy on 3D printing applications."},
-{id:13,year:"2011",era:"building",cat:"competency",theme:"Listening to team",title:"Software licence savings",desc:"Redefined ordering and tracking processes for software licences and maintenance agreements. Eliminated unused licences and outdated agreements.",big:"$1.2M saved"},
+{id:11,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"Micro satellite startup: closing the ship telecommunications gap",desc:"Led the initial steps of a micro satellite startup born from a real problem: missing data at sea. Proposed a 12 satellite constellation to close the telecommunications gap on vessels.",big:"12 satellites"},
+{id:12,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"3D printing consultancy",desc:"Pro bono consultancy exploring 3D printing applications for manufacturing replacement parts and prototyping in maritime and energy environments."},
+{id:13,year:"2011",era:"building",cat:"competency",theme:"Listening to team",title:"Software licence savings",desc:"Redefined licence ordering and tracking for a $1.2M portfolio. Eliminated unused licences and outdated agreements, four years before BP established a global licence team.",big:"$1.2M saved"},
 {id:14,year:"2018",era:"transform",cat:"competency",theme:"Root cause & business impact analysis at scale",title:"Purchase requisition errors: systemic fix",desc:"Led the effort to fix systemic errors in the purchase requisition system, reducing errors from 7,500 to 500 in one year. 18,000 requisitions processed annually.",big:"7,500 → 500"},
-{id:15,year:"2018",era:"transform",cat:"competency",theme:"Root cause & business impact analysis at scale",title:"Development cycle reduction",desc:"Reduced development cycles through automated testing, streamlined code deployment and data migrations.",big:"260 → 60 days"},
-{id:16,year:"2019",era:"transform",cat:"competency",theme:"Innovation and collaboration",title:"BP Shipping technology innovation festival",desc:"Organised a two day innovation festival. 15 industry leaders showcased emerging technologies. Best ideas selected for 6 week proof of concept trials.",big:"15 leaders",person:"VP Shipping"},
+{id:15,year:"2018",era:"transform",cat:"competency",theme:"Root cause & business impact analysis at scale",title:"Development cycle reduction",desc:"Reduced development cycles from 260 to 60 days through automated testing and streamlined deployments. Enlisted IBM Ship Support to further reduce vessel deployment from five weeks to four days.",big:"260 → 60 days"},
+{id:16,year:"2019",era:"transform",cat:"competency",theme:"Innovation and collaboration",title:"BP Shipping technology innovation festival",desc:"Organised a two day innovation festival. 15 industry leaders including Rolls Royce and ABB showcased emerging technologies. Best ideas selected for 6 week proof of concept trials.",big:"15 leaders",person:"VP Shipping"},
 {id:17,year:"2019",era:"transform",cat:"competency",theme:"Influencing others",title:"14 training courses + 1 podcast",desc:"Delivered 14 training courses and a podcast as part of BP's internal programme on changing mindsets towards agile ways of working.",big:"14 courses",person:"Sponsored by VP leadership"},
 {id:18,year:"2019",era:"transform",cat:"capabilities",theme:"Design thinking",title:"HR global ideation session",desc:"Participated in a global HR ideation session for the launch of BP's new employee self service platform.",person:"VP Shipping"},
 {id:19,year:"2019",era:"transform",cat:"competency",theme:"Service architecture",title:"Bentley SaaS service architecture",desc:"Led the creation of a 6 workstream service architecture and consumption model for a Bentley SaaS solution in global production operations.",big:"6 workstreams"},
@@ -237,38 +257,41 @@ milestones:[
 {id:21,year:"2019",era:"transform",cat:"learning",theme:"Digital security",title:"Digital security risks identification",desc:"Identified digital security implications and access provisioning gaps for global production users. Received formal recognition from the digital security team.",person:"VP Global Business Services"},
 {id:22,year:"2020",era:"transform",cat:"learning",theme:"Strategic thinking",title:"Next generation model transition",desc:"Developed early thinking on next generation outsourcing contract models and transition approaches.",person:"VP Global Business Services"},
 {id:23,year:"2020",era:"transform",cat:"capabilities",theme:"Sustainability thinking",title:"CO2 emission reduction UX challenge",desc:"CO2 emission reduction ideas: revamping car sharing introducing 'Uber' UX challenge.",person:"VP Low Carbon"},
-{id:24,year:"2020",era:"transform",cat:"capabilities",theme:"AI community building",title:"Internal AI community platform design",desc:"Played an instrumental role in designing BP's internal AI community platform, providing the identity and personality needed to engage and grow the AI community.",quote:"\"Nick played an instrumental role in the design of the ai@bp site by providing the right identity and personality the platform needed to engage and grow the AI community within BP.\"",person:"VP AI Community"},
+{id:24,year:"2020",era:"transform",cat:"capabilities",theme:"AI community building",title:"Internal AI community platform design",desc:"Designed BP's internal AI community platform, providing the identity and personality needed to engage and grow the AI community.",quote:"\"Nick played an instrumental role in the design of the ai@bp site by providing the right identity and personality the platform needed to engage and grow the AI community within BP.\"",person:"VP AI Community"},
 {id:25,year:"2020",era:"transform",cat:"competency",theme:"Agile delivery",title:"Operator workbench: accelerated product delivery",desc:"Tactical intervention across 2 sprints to free up product owners' time and accelerate issue resolution during a critical system rollout.",big:"2 sprints"},
 {id:26,year:"2020",era:"transform",cat:"competency",theme:"Program management",title:"8 workstream integration plan",desc:"Delivered an integration plan across 8 workstreams for 4 critical applications at BP's digital transformation centre.",big:"8 workstreams"},
 {id:27,year:"2020",era:"transform",cat:"competency",theme:"Internal transformation",title:"Internal rebrand communication strategy",desc:"Led the communication strategy for a major internal restructuring, ensuring service owners and senior leaders understood the changes. Eight week assignment.",big:"8 weeks",person:"VP Communications"},
 {id:28,year:"2020",era:"transform",cat:"competency",theme:"Next generation contracts",title:"Podcast for service owners",desc:"Distilling early thinking on next generation contract transition into a 15 minute podcast to help service owners adopt the right contracts for their area."},
 {id:29,year:"2020",era:"transform",cat:"giveback",theme:"Hope in COVID times",title:"Cambridge Medical Academy: COVID support",desc:"Volunteered to support the Cambridge Medical Academy. Helped 4 teams globally adopt agile methods and deliver webinars to hospitals preparing for the second wave of COVID 19.",big:"6 weeks"},
 {id:30,year:"2020",era:"transform",cat:"competency",theme:"Public speaking / Be the change you want to see",title:"5 podcasts on leadership and growth",desc:"Created and hosted 5 podcasts on leadership topics including defining success, expertise, personal growth, and supporting others as leaders.",big:"5 podcasts"},
-{id:31,year:"2021",era:"transform",cat:"capabilities",theme:"Releasing value",title:"BP Pulse: digital support model",desc:"Established the first iteration of the digital support model for BP Pulse. This rapid charging hub for fleet vehicles is now live and first of its kind in UK.",big:"First in UK",person:"Inspired by CEO"},
-{id:63,year:"2021",era:"connect",cat:"competency",theme:"Turning perceptions to facts",title:"Connectivity fact finding initiative",desc:"Led a 3 month investigation that revealed digital service degradation at retail sites was not solely due to low bandwidth. Assembled a multidisciplinary team for data collection and objective analysis, changing the narrative across the business.",big:"3 months"},
-{id:64,year:"2022",era:"connect",cat:"competency",theme:"Servant leadership",title:"Retail digital experience analysis",desc:"Tasked by senior leadership to conduct a deep analysis of digital systemic issues affecting user experience at retail sites across Europe. Identified and proposed workstreams to enhance the situation."},
-{id:32,year:"2021",era:"connect",cat:"award",theme:"Engagement and leadership",title:"Determination to work closely with the business",awardType:"One Team",awardedBy:"VP Operational Excellence ESA"},
+{id:31,year:"2021",era:"connect",cat:"capabilities",theme:"Releasing value",title:"BP Pulse: digital support model",desc:"Established the first digital support model for BP Pulse, BP's rapid EV charging hub. Led the EV rollout, modernising outdated stations to meet accelerated demand. First of its kind in the UK.",big:"First in UK",person:"Inspired by CEO"},
+{id:63,year:"2021",era:"connect",cat:"competency",theme:"Turning perceptions to facts",title:"Connectivity fact finding initiative",desc:"Led a 3 month investigation revealing retail site degradation was not solely due to low bandwidth. Assembled a multidisciplinary team for data collection and objective analysis.",big:"3 months"},
+{id:64,year:"2022",era:"connect",cat:"competency",theme:"Servant leadership",title:"Retail digital experience analysis",desc:"Tasked by senior leadership to analyse digital systemic issues affecting user experience at retail sites across Europe. Identified and proposed workstreams for improvement."},
+{id:32,year:"2021",era:"connect",cat:"award",theme:"Engagement and leadership",title:"Determination to work closely with the business",desc:"Recognised for proactive engagement with business stakeholders during the connectivity transformation.",awardType:"One Team",awardedBy:"VP Operational Excellence ESA"},
 {id:33,year:"2022",era:"connect",cat:"award",theme:"Turning perceptions to facts",title:"UK payment service issue analysis",awardType:"One Team",desc:"Brought together a multidisciplinary team, to capture the useful and relevant data and the unbiased examination of that data to identify issues beyond the anecdotal.",awardedBy:"Director, Connectivity"},
 {id:34,year:"2021",era:"connect",cat:"competency",theme:"Servant leadership",title:"Digital employee voice: Board engagement",desc:"Handpicked to represent the digital function at a Board Workforce Engagement session. Engaged directly with two BP board members.",person:"Selected by SVP P&C"},
 {id:35,year:"2022",era:"connect",cat:"award",theme:"Introducing unproven technology",title:"Excellent work fixing and communicating issues",awardType:"Excellence",desc:"Recognised for resolving critical retail site stability issues and maintaining clear stakeholder communication throughout.",awardedBy:"Director, Connectivity & VP Operational Excellence"},
 {id:36,year:"2021",era:"connect",cat:"award",theme:"Explored beyond boundaries",title:"Thank you for your persistence!",awardType:"One Team",desc:"A key motorway retail site brought back to an operational basis with an enhanced service.",awardedBy:"IT Manager, POS Transactions"},
-{id:37,year:"2022",era:"connect",cat:"award",theme:"Dealing with a major cyber security attack",title:"Restored connectivity in Poland during Russian Ukrainian war",awardType:"Excellence",desc:"Restored alternative connectivity options to existing VSat services in Poland affecting 1,200 retail station operations.",awardedBy:"Senior Retail Ops Manager Poland & VP Connectivity"},
+{id:37,year:"2022",era:"connect",cat:"award",theme:"Dealing with a major cyber security attack",title:"Restored connectivity in Poland during Russian Ukrainian war",awardType:"Excellence",desc:"Collaborated with MoD and BP's cyber security team to verify whether a connectivity incident in Poland was a cyber attack during the Russian Ukrainian war. Restored connectivity for 1,200 retail stations amidst an extremely challenging geopolitical situation.",awardedBy:"Senior Retail Ops Manager Poland & VP Connectivity"},
 {id:38,year:"2022",era:"connect",cat:"award",theme:"Mapping global requirements",title:"Service model workshops and delivery",awardType:"Live our Purpose",desc:"Led the team through a series of working sessions to define and deliver a new global connectivity service model.",awardedBy:"Director, Connectivity"},
-{id:39,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Finance review appreciation",awardType:"Play to Win",desc:"Recognised for setting up and managing a $13 million connectivity budget across Europe with rigorous financial oversight.",awardedBy:"Director, Connectivity"},
+{id:39,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Finance review appreciation",awardType:"Play to Win",desc:"Recognised for setting up and managing the European connectivity budget, which grew from $13M to £16M as scope expanded to include Cradlepoint 4G wireless router deployments at sites where fibre was not yet available, and the migration of 3,000 circuits from copper to fibre.",awardedBy:"Director, Connectivity"},
 {id:40,year:"2022",era:"connect",cat:"award",theme:"Active listening",title:"Great support retail infrastructure!",awardType:"Care for Others",quote:"\"For your outstanding support that you have delivered. Your work ethic inspires me to be my best every day.\"",awardedBy:"Retail infrastructure team"},
 {id:41,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Enhanced support model",awardType:"Play to Win",quote:"\"Your leadership has led to a significant change and improvement for the business in such a complex environment.\"",awardedBy:"Business Manager, European Retail"},
 {id:42,year:"2023",era:"connect",cat:"award",theme:"Building better supplier relationships",title:"Revised Diebold Nixdorf contract",awardType:"Play to Win",desc:"Recognition for revising the contract with Diebold Nixdorf to improve the responsiveness of their service and BP's ability to manage their performance.",awardedBy:"Global Technical Lead, Retail"},
 {id:43,year:"2023",era:"connect",cat:"award",theme:"Project Tangerine: EV charging",title:"Fast charging together: BP Iberdrola Joint Venture",awardType:"Play to Win",desc:"Provided Service Delivery SME expertise ensuring BP Iberdrola Joint Venture service level agreement was a success.",awardedBy:"Joint Ventures lead"},
 {id:44,year:"2023",era:"connect",cat:"award",theme:"EMCC global practitioner",title:"Coach/mentor accreditation at practitioner level",awardType:"Care for Others",desc:"EMCC Individual accreditation to practice as a coach/mentor at practitioner level.",big:"120h mentoring, 60h coaching",awardedBy:"VP P&C Digital"},
 {id:45,year:"2023",era:"connect",cat:"award",theme:"Caring for business outcomes",title:"Outstanding support and genuine care",awardType:"Live our Purpose",quote:"\"The support my team and I have received from you in the past year has been greatly appreciated. You genuinely care about our people and operations!\"",awardedBy:"Business Manager, European Retail"},
-{id:46,year:"2024",era:"connect",cat:"award",theme:"Servant leadership",title:"Successful migration of NOC to Infosys",awardType:"Play to Win",quote:"\"Thank you for transforming the NOC.\"",big:"5,000 devices",awardedBy:"VP Connectivity"},
-{id:47,year:"2024",era:"connect",cat:"competency",theme:"Be transparent while focusing on results",title:"Trading application performance resolved",desc:"Generated millions in savings in less than three months by resolving trading application performance issues.",big:"Millions saved"},
+{id:46,year:"2024",era:"connect",cat:"award",theme:"Servant leadership",title:"Successful migration of NOC to Infosys",desc:"Handpicked for the role. Over achieved against all targets. Zero disruption, full service continuity. Approach adopted company wide.",awardType:"Play to Win",quote:"\"Thank you for transforming the NOC.\"",big:"5,000 devices",awardedBy:"VP Connectivity"},
+{id:47,year:"2024",era:"connect",cat:"competency",theme:"Be transparent while focusing on results",title:"Trading application performance resolved",desc:"Saved $2.9M in under three months by analysing issues affecting the London trading floor. Challenged assumptions and built consensus using a diplomatic, evidence based approach.",big:"$2.9M saved"},
 {id:48,year:"2024",era:"connect",cat:"capabilities",theme:"Introducing new ideas",title:"AI vision for trading capabilities",desc:"Pioneered strategic vision to leverage AI for enhanced trading capabilities. London trading floor as first phase of a global MVP.",big:"Global MVP"},
 {id:50,year:"2021",era:"connect",cat:"competency",theme:"Introducing unproven technology",title:"Cradlepoint wireless: overnight speed upgrade",desc:"Pioneered use of wireless access points (Cradlepoints), resulting in overnight increase in speed from 3G to 4G across 60 stations throughout Europe.",big:"3G → 4G"},
-{id:51,year:"2021",era:"connect",cat:"competency",theme:"Leading the design and implementation",title:"SDWAN activation across Europe",desc:"Activated SDWAN connectivity across Europe in three months with EV and Retail sites. Zero disruption during transition.",big:"3 months"},
+{id:51,year:"2021",era:"connect",cat:"competency",theme:"Leading the design and implementation",title:"SDWAN activation across Europe",desc:"Led the activation of SDWAN connectivity across Europe in three months, coordinating with EV and Retail sites to enhance resilience with zero disruption during the transition.",big:"3 months"},
+{id:65,year:"2024",era:"connect",cat:"competency",theme:"Operational excellence",title:"NOC operational scale: 300+ reactive tickets monthly",desc:"Managing 300+ reactive tickets and 2,000 proactive alerts monthly across European refineries and offices, driving continuous improvement in problem resolution and change management.",big:"2,000 alerts/month"},
+{id:66,year:"2022",era:"connect",cat:"competency",theme:"Building better supplier relationships",title:"£3M+ saved through centralised bulk purchasing",desc:"Saved £3M+ through centralised bulk purchasing contracts across European connectivity vendors. Reinvested savings in new technology to modernise the estate.",big:"£3M+ saved"},
+{id:67,year:"2022",era:"connect",cat:"competency",theme:"Leading change",title:"3,000 copper to fibre migrations",desc:"Oversaw the migration of 3,000 circuits from copper to fibre across UK, Germany and Spain, with procurement of improved hardware and tooling.",big:"3,000 sites"},
 {id:52,year:"2023",era:"connect",cat:"competency",theme:"Joint Ventures",title:"BP Iberdrola Joint Venture: service delivery SME",desc:"Provided Service Delivery SME expertise ensuring the Joint Venture service level agreement was a success."},
 {id:53,year:"2022",era:"connect",cat:"competency",theme:"Clarity builds trust",title:"ServiceNow financial framework: operational cost reduction",desc:"Implemented a financial framework in ServiceNow for improved cost tracking and decision making across multiple units.",big:"$3.8M saved"},
-{id:54,year:"2021",era:"connect",cat:"competency",theme:"Hope in COVID times",title:"Field Service Model transformation during COVID chipset shortage",desc:"Transformed BP's Field Service Model during the COVID 19 chipset shortage, ensuring seamless continuity and cost effective solutions."},
+{id:54,year:"2021",era:"connect",cat:"competency",theme:"Hope in COVID times",title:"Field Service Model transformation during COVID chipset shortage",desc:"Transformed BP's Field Service Model during the COVID 19 chipset shortage when hardware replacements became impossible. Ensured continuity across 7,000+ sites with cost effective alternatives."},
 ],
 capabilities:[
 {name:"Leadership enabler",group:"Learnings",icon:"L",color:"#E1F5EE",iconColor:"#085041",nodes:[{points:["Passionate / proactive","Able and willing to change direction and thinking","Can do attitude"]}]},
@@ -285,11 +308,11 @@ education:{
     {year:"1997",title:"BSc in Maritime Business and Maritime Law",inst:"University of Plymouth"},
     {year:"1998",title:"MSc in Quality Management",inst:"University of Stirling",note:"Awarded Scholarship"},
     {year:"1999",title:"MSc in Information Technology",inst:"University of Stirling",note:"Awarded Scholarship"},
-    {year:"2000",title:"PhD in Quality Management & Information Technology (not completed)",inst:"University of Stirling",note:"Awarded Scholarship. Not completed due to work commitments."},
+    {year:"2000",title:"PhD in Quality Management & Information Technology (not completed)",inst:"University of Stirling",detail:"Awarded full PhD sponsorship. Did not complete due to accepting a career opportunity at Ulysses Systems. The academic foundation in Quality Management and IT directly shaped the structured, data driven approach applied throughout career.",note:"Awarded Scholarship. Not completed due to work commitments."},
   ],
   certifications:[
-    {year:"2024",title:"Insights Discovery Client Practitioner",inst:"Insights"},
-    {year:"2023",title:"EMCC Global Individual Accreditation, EIA Practitioner Level",inst:"European Mentoring and Coaching Council"},
+    {year:"2024",title:"Insights Discovery Client Practitioner",inst:"Insights",detail:"Certified to use the Insights Discovery profiling tool. Helps approach each person in a way uniquely suited to them, improving team communication and collaboration."},
+    {year:"2023",title:"EMCC Global Individual Accreditation, EIA Practitioner Level",inst:"European Mentoring and Coaching Council",detail:"Completed 120 hours of mentoring and 60 hours of coaching as part of the accreditation. Coaching unlocks the answers people already have."},
     {year:"2023",title:"Coaching Professional Level 5 Apprenticeship",inst:"BPP / Grant Thornton"},
     {year:"2023",title:"Functional Skills Qualification in English at Level 2",inst:"City & Guilds"},
     {year:"2016",title:"ITIL V3 Intermediate Certificate in IT Service Transition",inst:"AXELOS Global Best Practice"},
@@ -305,7 +328,7 @@ education:{
     {year:"1998",title:"ISO 9000 and ISM Code Auditor",inst:"Ferriby Group International"},
   ],
   scholarships:[
-    {year:"1998–1999",title:"Panxiatiko Idrima Ipotrofion, Ioannoy Diamanti Patera Scholarship",inst:"Awarded for outstanding academic achievement and high-value dissertation contribution to the shipping industry"},
+    {year:"1998–1999",title:"Panxiatiko Idrima Ipotrofion, Ioannoy Diamanti Patera Scholarship",inst:"Awarded for outstanding academic achievement and high-value dissertation contribution to the shipping industry",detail:"A prestigious Greek scholarship recognising outstanding academic achievement and a high value dissertation contribution to the shipping industry during MSc in Quality Management."},
     {year:"1998–1999",title:"MSc Educational Grant",inst:"University of Stirling"},
     {year:"2000",title:"PhD Sponsorship",inst:"University of Stirling"},
   ]
@@ -319,14 +342,45 @@ const catMeta={learning:{label:'Learning',bg:'var(--cat-learning-bg)',color:'var
 function renderCareerGrid(){
   const t=document.getElementById('careerTable');
   let h='<thead><tr><th>Period</th><th>Role</th><th>Unit</th><th>Budget</th><th>Team</th><th>Scope</th><th>Key skills</th></tr></thead><tbody>';
-  DATA.careers.forEach(c=>{h+=`<tr><td style="white-space:nowrap">${c.period}</td><td><span class="role-name">${c.role}</span><br><span style="font-size:11px;color:var(--slate)">${c.company}</span></td><td><span class="unit-tag ${unitClass[c.unit]}">${unitLabels[c.unit]}</span></td><td>${c.budget}</td><td>${c.team}</td><td>${c.scope}</td><td style="font-size:12px;color:var(--slate)">${c.skills}</td></tr>`;});
+  DATA.careers.forEach((c,i)=>{
+    h+=`<tr class="career-data-row" data-idx="${i}"><td style="white-space:nowrap">${c.period}</td><td><span class="role-name">${c.role}</span><br><span style="font-size:11px;color:var(--slate)">${c.company}</span>${c.desc?'<span class="expand-arrow">&#9662;</span>':''}</td><td><span class="unit-tag ${unitClass[c.unit]}">${unitLabels[c.unit]}</span></td><td>${c.budget}</td><td>${c.team}</td><td>${c.scope}</td><td style="font-size:12px;color:var(--slate)">${c.skills}</td></tr>`;
+    if(c.desc) h+=`<tr class="career-desc-row" data-idx="${i}"><td colspan="7"><div class="career-desc-text">${c.desc}</div></td></tr>`;
+  });
   t.innerHTML=h+'</tbody>';
+  t.querySelectorAll('.career-data-row').forEach(row=>{
+    row.addEventListener('click',()=>{
+      const idx=row.dataset.idx;
+      const descRow=t.querySelector('.career-desc-row[data-idx="'+idx+'"]');
+      if(!descRow)return;
+      const wasOpen=row.classList.contains('open');
+      t.querySelectorAll('.career-data-row').forEach(r=>r.classList.remove('open'));
+      t.querySelectorAll('.career-desc-row').forEach(r=>r.classList.remove('open'));
+      if(!wasOpen){row.classList.add('open');descRow.classList.add('open');}
+    });
+  });
+}
+
+function renderCareerMobile(){
+  const grid=document.getElementById('careerMobile');
+  DATA.careers.forEach(c=>{
+    const card=document.createElement('div');
+    card.className='career-mob-card';
+    const uLabel={startup:'Maritime Startup',shipping:'Shipping',upstream:'Upstream',downstream:'Downstream',refineries:'Refineries & Platforms'}[c.unit]||c.unit;
+    const uCls={startup:'unit-startup',shipping:'unit-shipping',upstream:'unit-upstream',downstream:'unit-downstream',refineries:'unit-refineries'}[c.unit]||'';
+    card.innerHTML=`<div class="career-mob-top"><div><div class="career-mob-role">${c.role}</div><div class="career-mob-company">${c.company} <span class="unit-tag ${uCls}" style="margin-left:6px">${uLabel}</span></div></div><div style="text-align:right;flex-shrink:0"><div class="career-mob-period">${c.period}</div><div class="career-mob-arrow">&#9662;</div></div></div><div class="career-mob-details"><div class="career-mob-grid"><div class="career-mob-field"><div class="career-mob-field-label">Budget</div><div class="career-mob-field-val">${c.budget}</div></div><div class="career-mob-field"><div class="career-mob-field-label">Team</div><div class="career-mob-field-val">${c.team}</div></div><div class="career-mob-field"><div class="career-mob-field-label">Scope</div><div class="career-mob-field-val">${c.scope}</div></div><div class="career-mob-field career-mob-skills"><div class="career-mob-field-label">Key skills</div><div class="career-mob-field-val">${c.skills}</div></div>${c.desc?`<div style="grid-column:1/-1;margin-top:8px;padding-top:10px;border-top:1px solid var(--sand-dark);font-size:12px;line-height:1.6;color:var(--slate)">${c.desc}</div>`:''}</div></div>`;
+    card.addEventListener('click',()=>{
+      const wasOpen=card.classList.contains('open');
+      grid.querySelectorAll('.career-mob-card').forEach(c=>c.classList.remove('open'));
+      if(!wasOpen)card.classList.add('open');
+    });
+    grid.appendChild(card);
+  });
 }
 
 function renderFilters(){
   const bar=document.getElementById('filterBar');
   // Simplified filters: All, Awards, Learning, Giving back & Pro bono, then timeline eras
-  [{key:'all',label:'All'},{key:'award',label:'Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2010'},{key:'era:building',label:'2013–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
+  [{key:'all',label:'All'},{key:'award',label:'Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2009'},{key:'era:building',label:'2010–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
     const btn=document.createElement('button');btn.className='filter-btn'+(i===0?' active':'');btn.textContent=f.label;btn.dataset.filter=f.key;
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
@@ -379,7 +433,8 @@ function renderMilestones(){
       else if(m.person) inner+=`<span class="m-card-person">${m.person}</span>`;
       inner+='</div>';
     }
-    card.innerHTML=inner;grid.appendChild(card);
+    card.innerHTML=inner;
+    grid.appendChild(card);
   });
 }
 
@@ -408,10 +463,22 @@ function renderEducation(){
     grid.appendChild(title);
     items.forEach(item=>{
       const card=document.createElement('div');
-      card.className='edu-card '+sec.cls;
-      let html=`<div class="edu-card-year">${item.year}</div><h4>${item.title}</h4><div class="edu-card-inst">${item.inst}</div>`;
+      card.className='edu-card '+sec.cls+(item.detail?' has-detail':'');
+      let html=`<div class="edu-card-year">${item.year}</div><h4>${item.title}${item.detail?'<span class="expand-arrow" style="margin-left:6px;font-size:10px;color:var(--slate-light);display:inline-block;transition:transform 0.25s">&#9662;</span>':''}</h4><div class="edu-card-inst">${item.inst}</div>`;
       if(item.note)html+=`<div class="edu-card-note">${item.note}</div>`;
+      if(item.detail)html+=`<div class="edu-detail" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;font-size:12px;line-height:1.6;color:var(--slate);margin-top:0">${item.detail}</div>`;
       card.innerHTML=html;
+      if(item.detail){
+        card.style.cursor='pointer';
+        card.addEventListener('click',()=>{
+          const det=card.querySelector('.edu-detail');
+          const arrow=card.querySelector('.expand-arrow');
+          const isOpen=card.classList.contains('open');
+          card.classList.toggle('open');
+          if(!isOpen){det.style.maxHeight='150px';det.style.marginTop='8px';arrow.style.transform='rotate(180deg)';}
+          else{det.style.maxHeight='0';det.style.marginTop='0';arrow.style.transform='rotate(0)';}
+        });
+      }
       grid.appendChild(card);
     });
   });
@@ -436,7 +503,7 @@ function renderCapabilities(){
   if(firstTile) firstTile.classList.add('open');
 }
 
-renderCareerGrid();renderFilters();renderMilestones();renderEducation();renderCapabilities();
+renderCareerGrid();renderCareerMobile();renderFilters();renderMilestones();renderEducation();renderCapabilities();
 
 // Back to top button
 window.addEventListener('scroll',function(){
