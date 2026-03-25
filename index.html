@@ -79,10 +79,13 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .unit-refineries{background:#FFCDD2;color:#B71C1C}
 .unit-startup{background:#E8EAF6;color:#283593}
 .unit-maritime{background:#B2DFDB;color:#004D40}
-.filter-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--sand-dark)}
-.filter-btn{font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:500;padding:6px 16px;border-radius:20px;border:1.5px solid var(--sand-dark);background:var(--white);color:var(--slate);cursor:pointer;transition:all 0.2s;white-space:nowrap}
-.filter-btn:hover{border-color:var(--slate-light);color:var(--navy)}
+.filter-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--sand-dark)}
+.filter-btn{font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:500;padding:16px 14px;border-radius:var(--radius);border:1.5px solid var(--sand-dark);background:var(--white);color:var(--slate);cursor:pointer;transition:all 0.2s;text-align:left;display:flex;flex-direction:column;gap:4px}
+.filter-btn:hover{border-color:var(--slate-light);color:var(--navy);box-shadow:0 2px 8px rgba(28,25,23,0.06)}
 .filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.filter-btn .filter-label{font-family:'DM Serif Display',Georgia,serif;font-size:15px;font-weight:400}
+.filter-btn .filter-count{font-family:'Outfit',sans-serif;font-size:22px;font-weight:700;line-height:1}
+.filter-btn.active .filter-count{color:var(--accent-light)}
 .milestones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:32px}
 .m-card{background:var(--white);border-radius:var(--radius);padding:18px 20px;border:1px solid transparent;border-left:3px solid transparent;transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s;display:flex;flex-direction:column;position:relative}
 .m-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(28,25,23,0.08);border-color:var(--sand-dark)}
@@ -173,9 +176,10 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .section{padding:32px 0 12px}
 .section-title{font-size:20px}
 .section-num{font-size:40px;top:-14px}
-.filter-bar{flex-wrap:nowrap;overflow-x:auto;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.filter-bar::-webkit-scrollbar{display:none}
-.filter-btn{flex-shrink:0;font-size:12px;padding:5px 14px}
+.filter-bar{grid-template-columns:repeat(2,1fr);gap:8px}
+.filter-btn{padding:12px 10px;font-size:13px}
+.filter-btn .filter-label{font-size:13px}
+.filter-btn .filter-count{font-size:18px}
 .milestones-grid{grid-template-columns:1fr;gap:10px}
 .m-card{padding:14px 16px}
 .m-card-big{font-size:22px}
@@ -215,7 +219,7 @@ body{font-size:11px}
 <body>
 <div class="top-stripe"></div>
 <header class="hero"><div class="container hero-content"><div class="hero-label" style="font-size:14px;letter-spacing:2px">Global IT & Digital Transformation Leader</div><h1>Nikolaos <span>Loizos</span></h1><div class="hero-accent"></div><p class="hero-sub">25 years driving digital transformation, service delivery, and network operations across maritime, oil & gas, and retail infrastructure. From 80 ship visits to leading Europe's NOC.</p><p class="hero-sub" style="margin-top:10px;font-size:15px;opacity:0.85">I turn operational chaos into structure, lead through outsourced and matrixed teams, and bring Greek cultural fluency to multinational corporate environments.</p><div class="lang-badges"><span class="lang-badge">EMCC Certified Coach</span><span class="lang-badge">Insights Discovery Practitioner</span></div><p class="hero-sub" style="margin-top:10px;font-size:13px;opacity:0.7">Coaching unlocks the answers people already have. Insights Discovery helps me approach each person in a way that is uniquely suited to them.</p></div></header>
-<nav class="stats-bar"><div class="container"><div class="stats-grid"><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">25+</div><div class="stat-label">Years</div></a><a href="#milestones" class="stat-item" style="text-decoration:none"><div class="stat-num">66</div><div class="stat-label">Milestones</div></a><a href="#milestones" class="stat-item" style="text-decoration:none;cursor:pointer" onclick="event.preventDefault();document.querySelector('[data-filter=award]').click();document.getElementById('milestones').scrollIntoView({behavior:'smooth'})"><div class="stat-num">15</div><div class="stat-label">Energize awards</div></a><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">10</div><div class="stat-label">Roles</div></a><a href="#education" class="stat-item" style="text-decoration:none"><div class="stat-num">9</div><div class="stat-label">Certifications</div></a></div></div></nav>
+<nav class="stats-bar"><div class="container"><div class="stats-grid"><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">25+</div><div class="stat-label">Years</div></a><a href="#milestones" class="stat-item" style="text-decoration:none"><div class="stat-num">67</div><div class="stat-label">Milestones</div></a><a href="#milestones" class="stat-item" style="text-decoration:none;cursor:pointer" onclick="event.preventDefault();document.querySelector('[data-filter=award]').click();document.getElementById('milestones').scrollIntoView({behavior:'smooth'})"><div class="stat-num">15</div><div class="stat-label">Energize awards</div></a><a href="#career" class="stat-item" style="text-decoration:none"><div class="stat-num">10</div><div class="stat-label">Roles</div></a><a href="#education" class="stat-item" style="text-decoration:none"><div class="stat-num">9</div><div class="stat-label">Certifications</div></a></div></div></nav>
 <section class="section" id="career"><div class="container"><div class="section-head"><span class="section-num">01</span><h2 class="section-title">Career progression</h2></div><p class="section-desc">From Ulysses Systems to Head of European NOC. Scroll to explore each role.</p><div class="career-scroll"><table class="career-table" id="careerTable"></table></div><div class="career-mobile" id="careerMobile"></div></div></section>
 <section class="section" id="milestones"><div class="container"><div class="section-head"><span class="section-num">02</span><h2 class="section-title">Milestones & mindset</h2></div><p class="section-desc">Key achievements, awards, and turning points across the journey.</p><div class="filter-bar" id="filterBar"></div><div class="milestones-grid" id="milestonesGrid"></div></div></section>
 <section class="section" id="education"><div class="container"><div class="section-head"><span class="section-num">03</span><h2 class="section-title">Education & certifications</h2></div><p class="section-desc">Academic qualifications, professional certifications, training, and scholarships.</p><div class="edu-grid" id="eduGrid"></div></div></section>
@@ -253,7 +257,7 @@ milestones:[
 {id:5,year:"2011",era:"building",cat:"competency",theme:"Testing thoroughly",title:"Cloud email platform + 50+ app remediation",desc:"Led the introduction of cloud email and migrated 50+ applications in partnership with IBM, supporting 520 users across UK, Singapore and US with zero disruption.",big:"520 users"},
 {id:6,year:"2015",era:"building",cat:"competency",theme:"Reduce energy consumption",title:"Server footprint reduction",desc:"Reduced Shipping's 120 server footprint to 50 in 1 year using cloud services and shared infrastructure. Established a compliance profile that kept shipping compliant through to 2020.",big:"120 → 50"},
 {id:7,year:"2016",era:"building",cat:"competency",theme:"Leading change",title:"Operational compliance framework",desc:"Designed and established an operational compliance framework for IT services in Shipping globally, covering ISM code audits, Sarbanes Oxley, business continuity, and digital security.",big:"3 years"},
-{id:8,year:"2017",era:"building",cat:"giveback",theme:"Coaching others",title:"Developed two team members into leadership roles",desc:"Coached and mentored two team members through promotion to senior leadership positions using structured development plans, coaching conversations, and stretch assignments.",big:"2 developed"},
+{id:8,year:"2017",era:"building",cat:"giveback",theme:"Developing others",title:"Developed two team members into leadership roles",desc:"Coached and mentored two team members through promotion to senior leadership positions using structured development plans, coaching conversations, and stretch assignments.",big:"2 developed"},
 {id:9,year:"2011",era:"building",cat:"competency",theme:"Listening to business",title:"Unified comms rollout as acting programme manager",desc:"Acting programme manager for the rollout of unified communications at BP headquarters. Removed all desk phones, creating a self reliant digital workplace."},
 {id:10,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"Metron Additive Engineering ISO assurance",desc:"Embedded ISO assurance system for Metron Additive Engineering. Pro bono consultancy."},
 {id:11,year:"2017",era:"building",cat:"probono",theme:"Pro bono consultancy",title:"Micro satellite startup: closing the ship telecommunications gap",desc:"Led the initial steps of a micro satellite startup born from a real problem: missing data at sea. Proposed a 12 satellite constellation to close the telecommunications gap on vessels.",big:"12 satellites"},
@@ -289,6 +293,7 @@ milestones:[
 {id:39,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Finance review appreciation",awardType:"Play to Win",desc:"Recognised for setting up and managing the European connectivity budget, which grew from $13M to £16M as scope expanded to include Cradlepoint 4G wireless router deployments at sites where fibre was not yet available, and the migration of 3,000 circuits from copper to fibre.",awardedBy:"Director, Connectivity"},
 {id:40,year:"2022",era:"connect",cat:"award",theme:"Active listening",title:"Great support retail infrastructure!",awardType:"Care for Others",quote:"\"For your outstanding support that you have delivered. Your work ethic inspires me to be my best every day.\"",awardedBy:"Retail infrastructure team"},
 {id:41,year:"2022",era:"connect",cat:"award",theme:"Clarity builds trust",title:"Enhanced support model",awardType:"Play to Win",quote:"\"Your leadership has led to a significant change and improvement for the business in such a complex environment.\"",awardedBy:"Business Manager, European Retail"},
+{id:68,year:"2023",era:"connect",cat:"giveback",theme:"Developing others",title:"Early careers mentoring: graduate to permanent role",desc:"Mentored an early careers employee through the programme over two years, supporting their development and transition from the graduate scheme into a permanent role."},
 {id:42,year:"2023",era:"connect",cat:"award",theme:"Building better supplier relationships",title:"Revised Diebold Nixdorf contract",awardType:"Play to Win",desc:"Recognition for revising the contract with Diebold Nixdorf to improve the responsiveness of their service and BP's ability to manage their performance.",awardedBy:"Global Technical Lead, Retail"},
 {id:43,year:"2023",era:"connect",cat:"award",theme:"Project Tangerine: EV charging",title:"Fast charging together: BP Iberdrola Joint Venture",awardType:"Play to Win",desc:"Provided Service Delivery SME expertise ensuring BP Iberdrola Joint Venture service level agreement was a success.",awardedBy:"Joint Ventures lead"},
 {id:44,year:"2023",era:"connect",cat:"award",theme:"EMCC global practitioner",title:"Coach/mentor accreditation at practitioner level",awardType:"Care for Others",desc:"EMCC Individual accreditation to practice as a coach/mentor at practitioner level.",big:"120h mentoring, 60h coaching",awardedBy:"VP P&C Digital"},
@@ -391,9 +396,20 @@ function renderCareerMobile(){
 
 function renderFilters(){
   const bar=document.getElementById('filterBar');
-  // Simplified filters: All, Awards, Learning, Giving back & Pro bono, then timeline eras
-  [{key:'all',label:'All'},{key:'award',label:'Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2009'},{key:'era:building',label:'2010–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
-    const btn=document.createElement('button');btn.className='filter-btn'+(i===0?' active':'');btn.textContent=f.label;btn.dataset.filter=f.key;
+  const ms=DATA.milestones;
+  const counts={
+    all:ms.length,
+    award:ms.filter(m=>m.cat==='award').length,
+    learning:ms.filter(m=>m.cat==='learning').length,
+    givepro:ms.filter(m=>m.cat==='giveback'||m.cat==='probono').length,
+    'era:early':ms.filter(m=>m.era==='early').length,
+    'era:building':ms.filter(m=>m.era==='building').length,
+    'era:transform':ms.filter(m=>m.era==='transform').length,
+    'era:connect':ms.filter(m=>m.era==='connect').length
+  };
+  [{key:'all',label:'All milestones'},{key:'award',label:'Energize Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2009'},{key:'era:building',label:'2010–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
+    const btn=document.createElement('button');btn.className='filter-btn'+(i===0?' active':'');btn.dataset.filter=f.key;
+    btn.innerHTML=`<span class="filter-count">${counts[f.key]}</span><span class="filter-label">${f.label}</span>`;
     btn.addEventListener('click',()=>{
       document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
@@ -405,7 +421,6 @@ function renderFilters(){
         else card.classList.toggle('hidden', cat!==f.key);
       });
       updateYearDividers();
-      updateFilterCount();
     });
     bar.appendChild(btn);
   });
@@ -535,3 +550,4 @@ updateFilterCount();
 </script>
 </body>
 </html>
+
