@@ -80,10 +80,10 @@ body{font-family:'Source Sans 3',-apple-system,sans-serif;background:var(--sand)
 .unit-startup{background:#E8EAF6;color:#283593}
 .unit-maritime{background:#B2DFDB;color:#004D40}
 .filter-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--sand-dark)}
-.filter-btn{font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:500;padding:16px 14px;border-radius:var(--radius);border:1.5px solid var(--sand-dark);background:var(--white);color:var(--slate);cursor:pointer;transition:all 0.2s;text-align:left;display:flex;flex-direction:column;gap:4px}
+.filter-btn{font-family:'Source Sans 3',sans-serif;font-size:14px;font-weight:500;padding:18px 16px;border-radius:var(--radius);border:1.5px solid var(--sand-dark);background:var(--white);color:var(--slate);cursor:pointer;transition:all 0.2s;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:90px}
 .filter-btn:hover{border-color:var(--slate-light);color:var(--navy);box-shadow:0 2px 8px rgba(28,25,23,0.06)}
 .filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
-.filter-btn .filter-label{font-family:'DM Serif Display',Georgia,serif;font-size:15px;font-weight:400}
+.filter-btn .filter-label{font-family:'Source Sans 3',sans-serif;font-size:13px;font-weight:500;line-height:1.3;color:inherit}
 .filter-btn .filter-count{font-family:'Outfit',sans-serif;font-size:22px;font-weight:700;line-height:1}
 .filter-btn.active .filter-count{color:var(--accent-light)}
 .milestones-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:32px}
@@ -407,7 +407,7 @@ function renderFilters(){
     'era:transform':ms.filter(m=>m.era==='transform').length,
     'era:connect':ms.filter(m=>m.era==='connect').length
   };
-  [{key:'all',label:'All milestones'},{key:'award',label:'Energize Awards'},{key:'learning',label:'Learning'},{key:'givepro',label:'Giving back & Pro bono'},{key:'era:early',label:'2000–2009'},{key:'era:building',label:'2010–2018'},{key:'era:transform',label:'2018–2021'},{key:'era:connect',label:'2021–2024'}].forEach((f,i)=>{
+  [{key:'all',label:'All Milestones'},{key:'award',label:'Energize Awards'},{key:'learning',label:'Learning & Growth'},{key:'givepro',label:'Giving Back'},{key:'era:early',label:'Maritime & Fleet Foundations'},{key:'era:building',label:'Shipping: Modernisation & Growth'},{key:'era:transform',label:'Digital Transformation & Innovation'},{key:'era:connect',label:'Infrastructure & Network Operations'}].forEach((f,i)=>{
     const btn=document.createElement('button');btn.className='filter-btn'+(i===0?' active':'');btn.dataset.filter=f.key;
     btn.innerHTML=`<span class="filter-count">${counts[f.key]}</span><span class="filter-label">${f.label}</span>`;
     btn.addEventListener('click',()=>{
@@ -550,4 +550,3 @@ updateFilterCount();
 </script>
 </body>
 </html>
-
